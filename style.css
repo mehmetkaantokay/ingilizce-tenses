@@ -1,10 +1,18 @@
 /* --- Genel Sayfa Stilleri --- */
+html {
+    box-sizing: border-box; /* Tüm elemanlar için kutu modelini ayarlar */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Miras yoluyla kutu modelini alır */
+}
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Genel yatay kaydırmayı engeller */
     background-color: #001989; /* Fallback color */
 }
 
@@ -91,7 +99,6 @@ body::before {
     position: relative;
     z-index: 2; /* Noktaların okun üzerinde olması için */
     flex-wrap: nowrap; /* Noktaların sarılmasını engelle */
-    /* gap kaldırıldı çünkü justify-content: space-between kullanılıyor */
 }
 
 .point {
@@ -110,15 +117,11 @@ body::before {
     font-size: 0; /* Yazılar gizlendi */
     padding: 0;
     box-sizing: border-box;
-    /* animation: pulse-effect kaldırıldı */
     margin-top: -15px; /* Yeni boyutun yarısı kadar yukarı kaydırıldı */
 }
 
-/* pulse-effect animasyonu kaldırıldı */
-
 .point:hover {
     transform: scale(1.1); /* Hover büyümesi ayarlandı */
-    /* background-color değişimi kaldırıldı, sadece tıklamada değişecek */
     box-shadow: 0 3px 8px rgba(0,0,0,0.4);
 }
 
@@ -199,6 +202,7 @@ body::before {
     color: #333;
     text-align: left;
     min-height: 200px; /* İçerik olmasa bile kutu yüksekliği olsun */
+    overflow-x: auto; /* Yatayda taşan içerik için kaydırma çubuğu ekler */
 }
 
 #content-container.visible {
@@ -210,7 +214,7 @@ body::before {
     color: #012169;
     font-size: 2.2em;
     margin-top: 0;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid #2ecc71; /* Alt çizgi rengi yeşil yapıldı */
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -248,13 +252,14 @@ body::before {
 
 /* Tablo Stilleri */
 .tense-table {
-    width: 100%;
+    width: 100%; /* Tablo genişliği ana kapsayıcısına göre ayarlandı */
     border-collapse: collapse;
     margin-top: 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden; /* Köşelerin yuvarlak olması için */
+    table-layout: auto; /* İçerik boyutuna göre sütun genişliğini belirler */
 }
 
 .tense-table thead {
@@ -267,6 +272,7 @@ body::before {
     border: 1px solid #ddd;
     text-align: left;
     vertical-align: top;
+    /* word-wrap: break-word; Eğer metinler taşarsa kelimeleri bölmek için eklenebilir */
 }
 
 .tense-table th {

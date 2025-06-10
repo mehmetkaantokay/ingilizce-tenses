@@ -57,21 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>had been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmaktaydım/yapmaktaydı/yapmaktaydık vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>hadn't been / had not been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmamaktaydım/yapmamaktaydı/yapmamaktaydık vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Had + I, You, He, She, It, We, They</td>
                             <td>been</td>
                             <td>Verb (-ing)?</td>
@@ -140,21 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>had</td>
                             <td>Verb (V3)</td>
                             <td>... yapmıştım/yapmıştı/yapmıştık vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>hadn't / had not</td>
                             <td>Verb (V3)</td>
                             <td>... yapmamıştım/yapmamıştı/yapmamıştık vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Had + I, You, He, She, It, We, They</td>
                             <td></td> <!-- Bu kısım boş kalacak çünkü 'had' zaten başta -->
                             <td>Verb (V3)?</td>
@@ -223,42 +223,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, He, She, It</td>
                             <td>was</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyordum/yapıyordu vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>You, We, They</td>
                             <td>were</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyordun/yapıyorduk/yapıyorlardı vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, He, She, It</td>
                             <td>wasn't / was not</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmıyordum/yapmıyordu vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>You, We, They</td>
                             <td>weren't / were not</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmıyordun/yapmıyorduk/yapmıyorlardı vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Was + I, He, She, It</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
                             <td>... yapıyor muydum/muydu vb.?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Were + You, We, They</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
@@ -326,19 +326,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>Verb (V2) (örn: cleaned, went)</td>
                             <td>... yaptım/yaptı/yaptık vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>didn't / did not + Verb (V1)</td>
                             <td>... yapmadım/yapmadı/yapmadık vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Did + I, You, He, She, It, We, They</td>
                             <td>Verb (V1)?</td>
                             <td>... yaptım mı/yaptı mı/yaptık mı vb.?</td>
@@ -406,42 +406,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, We, They</td>
                             <td>have been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmaktayım/yapmaktasın/yapmaktayız/yapmaktalar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>He, She, It</td>
                             <td>has been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmaktadır vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, We, They</td>
                             <td>haven't been / have not been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmamaktayım/yapmamaktasın/yapmamaktayız/yapmamaktalar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
                             <td>hasn't been / has not been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmamaktadır vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Have + I, You, We, They</td>
                             <td>been</td>
                             <td>Verb (-ing)?</td>
                             <td>... yapmakta mıyım/mısın/mıyız/mılar mı vb.?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Has + He, She, It</td>
                             <td>been</td>
                             <td>Verb (-ing)?</td>
@@ -510,42 +510,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, We, They</td>
                             <td>have</td>
                             <td>Verb (V3)</td>
                             <td>... yaptım/yaptın/yaptık/yaptılar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>He, She, It</td>
                             <td>has</td>
                             <td>Verb (V3)</td>
                             <td>... yaptı vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, We, They</td>
                             <td>haven't / have not</td>
                             <td>Verb (V3)</td>
                             <td>... yapmadım/yapmadın/yapmadık/yapmadılar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
                             <td>hasn't / has not</td>
                             <td>Verb (V3)</td>
                             <td>... yapmadı vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Have + I, You, We, They</td>
                             <td></td>
                             <td>Verb (V3)?</td>
                             <td>... yaptım mı/yaptın mı/yaptık mı/yaptılar mı vb.?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Has + He, She, It</td>
                             <td></td>
                             <td>Verb (V3)?</td>
@@ -614,63 +614,63 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I</td>
                             <td>am</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyorum.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>He, She, It</td>
                             <td>is</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyor.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>You, We, They</td>
                             <td>are</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyorsun/yapıyoruz/yapıyorlar.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I</td>
                             <td>am not</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmıyorum.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
                             <td>isn't / is not</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmıyor.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>You, We, They</td>
                             <td>aren't / are not</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmıyorsun/yapmıyoruz/yapmıyorlar.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Am + I</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
                             <td>... yapıyor muyum?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Is + He, She, It</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
                             <td>... yapıyor mu?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Are + You, We, They</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
@@ -740,37 +740,37 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, We, They</td>
                             <td>Verb (V1) (örn: clean, go)</td>
                             <td>... yaparım/yaparsın/yaparız/yaparlar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>He, She, It</td>
                             <td>Verb (V1 + -s/-es) (örn: cleans, goes)</td>
                             <td>... yapar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>don't / do not + Verb (V1)</td>
                             <td>... yapmam/yapmazsın/yapmayız/yapmazlar vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
                             <td>doesn't / does not + Verb (V1)</td>
                             <td>... yapmaz vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Do + I, You, We, They</td>
                             <td>Verb (V1)?</td>
                             <td>... yaparım mı/yaparsın mı/yaparız mı/yaparlar mı vb.?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Does + He, She, It</td>
                             <td>Verb (V1)?</td>
                             <td>... yapar mı?</td>
@@ -796,52 +796,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Simple Future Tense, "will" ve "be going to" olmak üzere iki farklı yapıyla ifade edilir. Her iki yapının da kendi kullanım alanları vardır.</p>
                 <ul>
-                    <li><strong>Yapısı (Will):</strong> Subject + will + Verb (Base Form - V1)
+                    <li><strong>Yapısı (Will):</strong> Subject + will + Verb (Base Form - V1)</li>
+                    <li><strong>Olumlu Cümleler:</strong> Özne + will + Fiil (V1).
                         <ul>
-                            <li><strong>Olumlu Cümleler:</strong> Özne + will + Fiil (V1).
-                                <ul>
-                                    <li>Örnek: "I <strong>will clean</strong> the house." (Evi temizleyeceğim.)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Olumsuz Cümleler:</strong> Özne + won't / will not + Fiil (V1).
-                                <ul>
-                                    <li>Örnek: "She <strong>won't come</strong> to the party." (Partiye gelmeyecek.)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Soru Cümleleri:</strong> Will + Özne + Fiil (V1)?
-                                <ul>
-                                    <li>Örnek: "<strong>Will you help</strong> me?" (Bana yardım edecek misin?)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + Fiil (V1)?
-                                <ul>
-                                    <li>Örnek: "When <strong>will they arrive</strong>?" (Ne zaman varacaklar?)</li>
-                                </ul>
-                            </li>
+                            <li>Örnek: "I <strong>will clean</strong> the house." (Evi temizleyeceğim.)</li>
                         </ul>
                     </li>
-                    <li><strong>Yapısı (Be Going To):</strong> Subject + am/is/are + going to + Verb (Base Form - V1)
+                    <li><strong>Olumsuz Cümleler:</strong> Özne + won't / will not + Fiil (V1).
                         <ul>
-                            <li><strong>Olumlu Cümleler:</strong> Özne + am/is/are + going to + Fiil (V1).
-                                <ul>
-                                    <li>Örnek: "I <strong>am going to clean</strong> the house." (Evi temizleyeceğim.)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Olumsuz Cümleler:</strong> Özne + am not / isn't / aren't + going to + Fiil (V1).
-                                <ul>
-                                    <li>Örnek: "He <strong>isn't going to call</strong> you." (Seni aramayacak.)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Soru Cümleleri:</strong> Am/Is/Are + Özne + going to + Fiil (V1)?
-                                <ul>
-                                    <li>Örnek: "<strong>Are you going to study</strong> tonight?" (Bu gece ders çalışacak mısın?)</li>
-                                </ul>
-                            </li>
-                            <li><strong>Wh-Soruları:</strong> Soru Kelimesi + am/is/are + Özne + going to + Fiil (V1)?
-                                <ul>
-                                    <li>Örnek: "What <strong>are you going to do</strong> tomorrow?" (Yarın ne yapacaksın?)</li>
-                                </ul>
-                            </li>
+                            <li>Örnek: "She <strong>won't come</strong> to the party." (Partiye gelmeyecek.)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Soru Cümleleri:</strong> Will + Özne + Fiil (V1)?
+                        <ul>
+                            <li>Örnek: "<strong>Will you help</strong> me?" (Bana yardım edecek misin?)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + Fiil (V1)?
+                        <ul>
+                            <li>Örnek: "When <strong>will they arrive</strong>?" (Ne zaman varacaklar?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -850,7 +823,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Tomorrow (yarın), Next week/month/year (gelecek hafta/ay/yıl), Soon (yakında), In the future (gelecekte).</p>
 
                 <h4>Önemli Notlar:</h4>
-                <p>"Will" genellikle anlık kararlar, spontane teklifler, kanıtsız tahminler veya sözler için kullanılırken; "be going to" daha çok önceden yapılmış planlar, niyetler veya belirgin kanıtlara dayalı tahminler için kullanılır. Her iki yapının da Türkçeye "yapacağım" olarak çevrilebilmesi, aralarındaki nüansı kavramayı önemli kılar. "Be going to" yapısında, "to be" yardımcı fiili (am/is/are) özneye göre çekimlenir.</p>
+                <p>"Will" genellikle anlık kararlar, spontane teklifler, kanıtsız tahminler veya sözler için kullanılırken; "be going to" daha çok önceden yapılmış planlar, niyetler veya belirgin kanıtlara dayalı tahminlar için kullanılır. Her iki yapının da Türkçeye "yapacağım" olarak çevrilebilmesi, aralarındaki nüansı kavramayı önemli kılar. "Be going to" yapısında, "to be" yardımcı fiili (am/is/are) özneye göre çekimlenir.</p>
 
                 <h4>Simple Future Tense Yapısı (Will ve Be Going To Karşılaştırması):</h4>
                 <table class="tense-table">
@@ -865,88 +838,88 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>Will</td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>will + Verb (V1)</td>
                             <td>... yapacağım/yapacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>Be Going To</td>
                             <td>I</td>
                             <td>am going to + Verb (V1)</td>
                             <td>... yapacağım.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td></td>
                             <td>He, She, It</td>
                             <td>is going to + Verb (V1)</td>
                             <td>... yapacak.</td>
                         </tr>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td></td>
                             <td>You, We, They</td>
                             <td>are going to + Verb (V1)</td>
                             <td>... yapacaksın/yapacağız/yapacaklar.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>Will</td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't / will not + Verb (V1)</td>
                             <td>... yapmayacağım/yapmayacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>Be Going To</td>
                             <td>I</td>
                             <td>am not going to + Verb (V1)</td>
                             <td>... yapmayacağım.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td></td>
                             <td>He, She, It</td>
                             <td>isn't / is not going to + Verb (V1)</td>
                             <td>... yapmayacak.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td></td>
                             <td>You, We, They</td>
                             <td>aren't / are not going to + Verb (V1)</td>
                             <td>... yapmayacaksın/yapmayacağız/yapmayacaklar.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will</td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>Verb (V1)?</td>
                             <td>... yapacak mıyım/mısın/mı vb.?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Be Going To</td>
                             <td>Am + I</td>
                             <td>going to + Verb (V1)?</td>
                             <td>... yapacak mıyım?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td></td>
                             <td>Is + He, She, It</td>
                             <td>going to + Verb (V1)?</td>
                             <td>... yapacak mı?</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td></td>
                             <td>Are + You, We, They</td>
                             <td>going to + Verb (V1)?</td>
-                            <td>... yapacak mısın/mıyız/mılar mı?</td>
+                            <td>... yapacak mısın/mıyız/mular mı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1011,21 +984,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>will be</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyor olacağım/olacaksın/olacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't be / will not be</td>
                             <td>Verb (-ing)</td>
                             <td>... yapıyor olmayacağım/olmayacaksın/olmayacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>be</td>
                             <td>Verb (-ing)?</td>
@@ -1094,21 +1067,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>will have</td>
                             <td>Verb (V3)</td>
                             <td>... yapmış olacağım/olacaksın/olacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't have / will not have</td>
                             <td>Verb (V3)</td>
                             <td>... yapmış olmayacağım/olmayacaksın/olmayacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>have</td>
                             <td>Verb (V3)?</td>
@@ -1177,21 +1150,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="color: #2ecc71;">Olumlu</td>
+                            <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>will have been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmakta olacağım/olacaksın/olacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #c0392b;">Olumsuz</td>
+                            <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't have been / will not have been</td>
                             <td>Verb (-ing)</td>
                             <td>... yapmakta olmayacağım/olmayacaksın/olmayacak vb.</td>
                         </tr>
                         <tr>
-                            <td style="color: #3498db;">Soru</td>
+                            <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>have been</td>
                             <td>Verb (-ing)?</td>

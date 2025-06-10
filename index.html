@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İngilizce Zamanlar Çizelgesi</title>
+    <!-- Harici CSS Dosyasını Bağlama -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Kit for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>Tenses (Zamanlar)</h1>
+        <p>Zamanda Yolculuk yaparak İngilizce öğrenmek için noktalara Tıkla!</p>
+        <p>En uzak geçmiş zamandan, en uzak gelecek zamana doğru sıralanmıştır.</p>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-arrow"></div>
+            <ul class="timeline-points">
+                <!-- Geçmiş Zamanlar (6) - Sıraya göre düzenlendi ve yazılar kaldırıldı -->
+                <li class="point" data-tense="past-perfect-continuous"></li>
+                <li class="point" data-tense="past-perfect"></li>
+                <li class="point" data-tense="past-continuous"></li>
+                <li class="point" data-tense="simple-past"></li>
+                <li class="point" data-tense="present-perfect-continuous"></li>
+                <li class="point" data-tense="present-perfect"></li>
+
+                <!-- Şimdiki Zaman (Merkez) - Konum simgesi ve aktif sınıfı ile -->
+                <li class="point location-marker active" data-tense="present-continuous">
+                    <i class="fa-solid fa-location-dot"></i>
+                </li>
+
+                <!-- Gelecek Zamanlar (5) - Sıraya göre düzenlendi ve yazılar kaldırıldı -->
+                <li class="point" data-tense="simple-present"></li>
+                <li class="point" data-tense="future-perfect-continuous"></li>
+                <li class="point" data-tense="future-perfect"></li>
+                <li class="point" data-tense="future-continuous"></li>
+                <li class="point" data-tense="simple-future"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tıklanınca açılacak içerik alanı -->
+    <div id="content-container">
+        <!-- JavaScript bu bölümü dinamik olarak dolduracak -->
+    </div>
+
+    <!-- Harici JavaScript Dosyasını Bağlama -->
+    <script src="script.js"></script>
+</body>
+</html>

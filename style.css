@@ -1,0 +1,357 @@
+/* --- Genel Sayfa Stilleri --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #001989; /* Fallback color */
+}
+
+/* Arkaplan Gradyanı ve Sallanma Efekti */
+body::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* İngiltere bayrağı renklerinden gradyan */
+    background: linear-gradient(to bottom, #012169, #FFFFFF, #C8102E);
+    /* %90 Bulanıklık efekti */
+    filter: blur(15px);
+    /* Hafif sallanma animasyonu */
+    animation: wave-effect 10s infinite alternate ease-in-out;
+    /* Kenarlardaki boşluğu kapatmak için ölçeklendirme */
+    transform: scale(1.1);
+}
+
+@keyframes wave-effect {
+    from {
+        transform: scale(1.1) translateX(-5px) rotate(-0.5deg);
+    }
+    to {
+        transform: scale(1.1) translateX(5px) rotate(0.5deg);
+    }
+}
+
+/* --- Header ve Zaman Çizelgesi Stilleri --- */
+.header-container {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Hafif şeffaf arka plan */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.header-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.header-container p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.timeline-wrapper {
+    position: relative;
+    width: 98%; /* Genişlik en sola ve sağa uzatıldı */
+    max-width: 1800px; /* Maksimum genişlik daha da artırıldı */
+    margin: 50px auto;
+    padding: 20px 0;
+    overflow: visible;
+}
+
+.timeline-arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Ok kalınlığı */
+    background: linear-gradient(to right, #00C9FF, #92FE9D); /* Gradyan ok */
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(146, 254, 157, 0.7); /* Parlama efekti */
+}
+
+.timeline-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Noktalar eşit aralıklarla yayıldı */
+    align-items: center; /* Dikeyde ortala (okun üzerine gelmesi için) */
+    position: relative;
+    z-index: 2; /* Noktaların okun üzerinde olması için */
+    flex-wrap: nowrap; /* Noktaların sarılmasını engelle */
+    /* gap kaldırıldı çünkü justify-content: space-between kullanılıyor */
+}
+
+.point {
+    position: relative;
+    width: 30px; /* Noktaların boyutu büyütüldü */
+    height: 30px; /* Noktaların boyutu büyütüldü */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF; /* Noktaların rengi beyaz yapıldı */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Daha hızlı geçiş */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+    font-size: 0; /* Yazılar gizlendi */
+    padding: 0;
+    box-sizing: border-box;
+    /* animation: pulse-effect kaldırıldı */
+    margin-top: -15px; /* Yeni boyutun yarısı kadar yukarı kaydırıldı */
+}
+
+/* pulse-effect animasyonu kaldırıldı */
+
+.point:hover {
+    transform: scale(1.1); /* Hover büyümesi ayarlandı */
+    /* background-color değişimi kaldırıldı, sadece tıklamada değişecek */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.point.active {
+    background-color: #2ecc71; /* Tıklanınca yeşil */
+    transform: scale(1.3); /* Tıklanınca biraz daha büyüsün */
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.7); /* Yeşil parlama */
+    animation: none; /* Aktifken animasyon olmasın */
+}
+
+.point span {
+    display: none; /* Metin tamamen gizlendi */
+}
+
+/* Şimdiki Zaman (Merkez) noktasının özel stili */
+.location-marker {
+    width: 40px; /* Konum işaretçisi daha da büyütüldü */
+    height: 40px; /* Konum işaretçisi daha da büyütüldü */
+    background-color: #FFFFFF; /* Rengi beyaz yapıldı */
+    border: 3px solid #2ecc71; /* Beyaz çerçeve ve yeşil dış çizgi */
+    box-shadow: 0 0 18px rgba(46, 204, 113, 0.9); /* Yeşil parlama daha belirgin */
+    animation: vibrate-effect 1.5s infinite; /* Titreme efekti korundu */
+    z-index: 5;
+    margin-top: -20px; /* Yeni boyutun yarısı kadar yukarı kaydırıldı */
+    transform: scale(1); /* Başlangıç büyüklüğü sıfırlandı */
+}
+
+@keyframes vibrate-effect {
+    0% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-1.5px, -1.5px) scale(1.05); }
+    50% { transform: translate(1.5px, 1.5px) scale(1.1); }
+    75% { transform: translate(-1.5px, 1.5px) scale(1.05); }
+    100% { transform: translate(1.5px, -1.5px) scale(1); }
+}
+
+.location-marker i {
+    position: static;
+    transform: none;
+    pointer-events: none !important;
+    font-size: 25px; /* Icon boyutu büyütüldü */
+    color: #2ecc71; /* Icon rengi yeşil */
+    margin-top: 0;
+}
+
+.location-marker:hover {
+    transform: scale(1.15); /* Hover büyümesi ayarlandı */
+}
+
+.location-marker.active {
+    background-color: #2ecc71; /* Tıklanınca yeşil */
+    transform: scale(1.35); /* Tıklanınca daha da büyüsün */
+    color: #2eff7e; /* Aktifken daha parlak yeşil */
+    border-color: #2ecc71; /* Aktifken dış çizgi de yeşil olabilir */
+}
+
+.location-marker.active i {
+    filter: drop-shadow(0 0 10px #2eff7e);
+    color: #FFFFFF; /* Aktif yeşil noktada ikon beyaz olsun */
+}
+
+.location-marker span {
+    display: none; /* Metin tamamen gizlendi */
+}
+
+/* Sağdan Gelen İçerik Kutusu */
+#content-container {
+    width: 98%; /* Not kısmı sayfanın kenarlarına kadar genişletildi */
+    max-width: 100%; /* Maksimum genişlik de ayarlandı */
+    margin: 40px 1%; /* Yanlarda %1 boşluk bırakıldı */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    position: relative;
+    right: -100%; /* Başlangıçta sağda gizli */
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Yaylı animasyon */
+    color: #333;
+    text-align: left;
+    min-height: 200px; /* İçerik olmasa bile kutu yüksekliği olsun */
+}
+
+#content-container.visible {
+    right: 0; /* İçeri gelsin */
+    opacity: 1;
+}
+
+#content-container h2 {
+    color: #012169;
+    font-size: 2.2em;
+    margin-top: 0;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#content-container h4 {
+    color: #2980b9;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+#content-container p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+#content-container ul {
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+#content-container ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+#content-container em {
+    display: block;
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Tablo Stilleri */
+.tense-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Köşelerin yuvarlak olması için */
+}
+
+.tense-table thead {
+    background-color: #012169; /* Koyu mavi başlık */
+    color: white;
+}
+
+.tense-table th, .tense-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tense-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+.tense-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Çift satırlar için açık gri */
+}
+
+.tense-table tbody tr:hover {
+    background-color: #e0e0e0; /* Satır üzerine gelince daha koyu gri */
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 2.2em;
+    }
+
+    .header-container p {
+        font-size: 1em;
+    }
+
+    .timeline-points {
+        flex-wrap: wrap; /* Küçük ekranlarda sarılma aktif */
+        justify-content: center; /* Ortalamaya devam */
+        gap: 15px; /* Mobil için boşluğu azalt */
+    }
+
+    .point {
+        width: 22px; /* Mobil için boyut büyütüldü */
+        height: 22px;
+        margin-top: -11px; /* Yarısı kadar yukarı */
+    }
+
+    .location-marker {
+        width: 32px; /* Mobil için boyut büyütüldü */
+        height: 32px;
+        margin-top: -16px; /* Yarısı kadar yukarı */
+    }
+
+    .location-marker i {
+        font-size: 18px; /* Mobil için icon boyutu büyütüldü */
+    }
+
+    #content-container {
+        width: 98%; /* Mobil cihazlarda da kenarlara kadar genişlet */
+        padding: 20px;
+        margin: 20px 1%; /* Yanlarda %1 boşluk */
+    }
+
+    #content-container h2 {
+        font-size: 1.8em;
+    }
+
+    #content-container h4 {
+        font-size: 1.2em;
+    }
+
+    .tense-table th, .tense-table td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+
+    .timeline-arrow {
+        display: block; /* Mobil cihazlarda oku tekrar göster */
+    }
+}
+
+@media (max-width: 480px) {
+    .point {
+        width: 20px; /* Daha küçük mobil ekranlar için daha da küçült */
+        height: 20px;
+        margin-top: -10px;
+    }
+    .location-marker {
+        width: 28px;
+        height: 28px;
+        margin-top: -14px;
+    }
+    .location-marker i {
+        font-size: 16px;
+    }
+}

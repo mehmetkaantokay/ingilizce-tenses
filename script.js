@@ -1,4 +1,111 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Performance optimizations
+    const DOM = {
+        points: document.querySelectorAll('.point'),
+        contentContainer: document.getElementById('content-container'),
+        timeline: document.querySelector('.timeline-points')
+    };
+
+    let isTransitioning = false;
+    let currentTense = '';
+
+    // Optimized debounce function
+    const debounce = (func, wait) => {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    };
+
+    // Optimized content loading with transition
+    const loadContent = debounce(async (tenseKey) => {
+        if (isTransitioning || currentTense === tenseKey) return;
+        isTransitioning = true;
+        currentTense = tenseKey;
+
+        // Prepare transition
+        DOM.contentContainer.classList.add('content-transition', 'slide-out');
+
+        // Wait for animation frame for better performance
+        await new Promise(resolve => requestAnimationFrame(resolve));
+
+        // Update content
+        try {
+            const data = tenseData[tenseKey];
+            DOM.contentContainer.innerHTML = data ? `
+                <h2>${data.title}</h2>
+                ${data.content}
+            ` : `
+                <h2>Bilgi Bulunamadı</h2>
+                <p>Bu zaman hakkında detaylı bilgi henüz eklenmemiştir.</p>
+            `;
+
+            // Trigger reflow
+            DOM.contentContainer.offsetHeight;
+
+            // Animate in
+            DOM.contentContainer.classList.remove('slide-out');
+            DOM.contentContainer.classList.add('slide-in');
+        } catch (error) {
+            console.error('Content loading error:', error);
+        } finally {
+            isTransitioning = false;
+        }
+    }, 150);
+
+    // Event delegation for better performance
+    DOM.timeline.addEventListener('click', (e) => {
+        const point = e.target.closest('.point');
+        if (!point) return;
+
+        // Remove active class from all points
+        DOM.points.forEach(p => p.classList.remove('active'));
+        
+        // Add active class to clicked point
+        point.classList.add('active');
+        
+        // Load content
+        loadContent(point.dataset.tense);
+    }, { passive: true });
+
+    // Touch events optimization for mobile
+    if ('ontouchstart' in window) {
+        DOM.timeline.addEventListener('touchstart', (e) => {
+            const point = e.target.closest('.point');
+            if (!point) return;
+            point.style.transform = 'scale(0.95)';
+        }, { passive: true });
+
+        DOM.timeline.addEventListener('touchend', (e) => {
+            const point = e.target.closest('.point');
+            if (!point) return;
+            point.style.transform = '';
+        }, { passive: true });
+    }
+
+    // Initialize with first content
+    const initialPoint = document.querySelector('.point.location-marker[data-tense="present-continuous"]');
+    if (initialPoint) {
+        initialPoint.classList.add('active');
+        loadContent(initialPoint.dataset.tense);
+    }
+
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    // Observe timeline points
+    DOM.points.forEach(point => observer.observe(point));
     const points = document.querySelectorAll('.point');
     const contentContainer = document.getElementById('content-container');
     let activePoint = null; // Aktif olan noktayı takip etmek için

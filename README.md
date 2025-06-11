@@ -23,3 +23,6 @@ Bu sayede, "yaptım" gibi tek bir Türkçe çevirinin ardındaki İngilizce'deki
 gerektiği konusunda stratejik bir yönlendirme sunar. Temel iletişimde daha hızlı ilerlemek için öncelikle en sık kullanılan bu iki zaman kipinde sağlam
 bir temel oluşturmak faydalıdır. Diğer zamanlar da dilin zenginliğini ve ifade gücünü artırmak için önemlidir, ancak pratik kullanım sıklıkları göz önünde
 bulundurularak öğrenme öncelikleri belirlenebilir.
+
+Detaylı İngilizce Not PDF için aşağıdaki adresi ziyaret edebilirsiniz.
+https://drive.google.com/drive/folders/11aukFcCvqtFdVcFF7HNYTtfgql3aAUK8?usp=sharing

@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <tbody>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
-                            <td>I, You, We, They</td>
+                            <td>I, You, He, She, It, We, They</td>
                             <td>Verb (V1) (örn: clean, go)</td>
                             <td>... yaparım/yaparsın/yaparız/yaparlar vb.</td>
                         </tr>
@@ -1065,7 +1065,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, He, She, It, We, They</td>
                             <td>will have</td>
                             <td>Verb (V3)</td>
-                            <td>... yapmış olacağım/olacaksın/olacak vb.</td>
+                                                       <td>... yapmış olacağım/olacaksın/olacak vb.</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
@@ -1234,4 +1234,29 @@ document.addEventListener('DOMContentLoaded', () => {
         state.activePoint = initialPoint;
         loadContent(initialPoint);
     }
+
+    // Sidebar işlevselliği
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const body = document.body;    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
+
+    // Sidebar linklerine tıklama işlevi
+    document.querySelectorAll('.sidebar-content a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tense = link.getAttribute('data-tense');
+            // Timeline'daki ilgili noktayı bul ve tıkla
+            const timelinePoint = document.querySelector(`.timeline-points .point[data-tense="${tense}"]`);
+            if (timelinePoint) {
+                timelinePoint.click();
+            }
+            // Mobil görünümde sidebar'ı kapat
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('open');
+                body.classList.remove('sidebar-open');
+            }
+        });
+    });
 });

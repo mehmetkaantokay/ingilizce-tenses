@@ -95,14 +95,41 @@ body::before {
     top: 50%;
     left: 0;
     width: 100%;
-    height: 5px; /* Ok kalınlığı */
-    background: linear-gradient(to right, #ffffff, #002f9e); /* Gradyan ok */
+    height: 5px;
+    background: linear-gradient(to right, #002f9e, #FFFFFF, #C8102E); /* İngiliz bayrağı renkleri */
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 2px;
-    box-shadow: 0 0 15px rgba(255, 56, 56, 0.7); /* Parlama efekti */
+    box-shadow: 0 0 15px rgba(200, 16, 46, 0.7); /* Kırmızı parıldama */
     transform: translateZ(0);
     will-change: transform;
+    overflow: hidden;
+}
+
+.timeline-arrow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        rgba(200, 16, 46, 0.2),
+        rgba(0, 47, 158, 0.2),
+        transparent
+    );
+    animation: lightEffect 15s linear infinite;
+}
+
+@keyframes lightEffect {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
 }
 
 .timeline-points {
@@ -310,6 +337,102 @@ body::before {
     background-color: #e0e0e0; /* Satır üzerine gelince daha koyu gri */
 }
 
+/* Sidebar Stilleri */
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    right: -40px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #002f9e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background-color: #C8102E;
+}
+
+.sidebar-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-content h3 {
+    color: #002f9e;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #C8102E;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-content ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-content ul li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-content ul li a:hover {
+    background-color: rgba(0, 47, 158, 0.1);
+    color: #002f9e;
+    padding-left: 15px;
+}
+
+/* Sidebar overlay olarak çalışacak, içeriği etkilemeyecek */
+.header-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobil düzenlemeler */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+    
+    body.sidebar-open .header-container {
+        margin-left: 0;
+    }
+}
+
 /* Responsive Düzenlemeler */
 @media (max-width: 768px) {
   /* Tüm mobil stilleri tek bir yerde topla */
@@ -429,7 +552,7 @@ body::before {
 }
 
 .timeline-arrow {
-    background: linear-gradient(90deg, #00C9FF, #92FE9D);
+    background: linear-gradient(90deg, #002f9e, #FFFFFF, #C8102E);
     background-size: 200% 100%;
     animation: gradient-shift 3s ease infinite;
     will-change: background-position;
@@ -479,28 +602,7 @@ body::before {
     position: relative;
 }
 
-.timeline-points::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #2ecc71, #3498db);
-    transform: translateY(-50%);
-    z-index: -1;
-    animation: lineFlow 2s linear infinite;
-    background-size: 200% 100%;
-}
-
-@keyframes lineFlow {
-    0% {
-        background-position: 100% 0;
-    }
-    100% {
-        background-position: -100% 0;
-    }
-}
+/* Zaman çizgisi tek parça olarak timeline-arrow ile gösteriliyor */
 
 /* Mobil görünüm için timeline çizgi düzenlemesi */
 @media (max-width: 768px) {

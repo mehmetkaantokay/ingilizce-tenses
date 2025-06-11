@@ -1,3 +1,25 @@
+/* CSS Değişkenleri - En üste eklenecek */
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --background-gradient: linear-gradient(to bottom, #002f9e, #FFFFFF, #C8102E);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-levels: {
+    light: rgba(0, 0, 0, 0.1),
+    medium: rgba(0, 0, 0, 0.2),
+    dark: rgba(0, 0, 0, 0.3)
+  }
+}
+
+/* Performans optimizasyonları için yeni class */
+.optimize-performance {
+  contain: layout style paint;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
 /* --- Genel Sayfa Stilleri --- */
 html {
     box-sizing: border-box; /* Tüm elemanlar için kutu modelini ayarlar */
@@ -13,7 +35,10 @@ body, html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
     overflow-x: hidden; /* Genel yatay kaydırmayı engeller */
-    background-color: #001989; /* Fallback color */
+    /* İngiltere bayrağı renklerinden gradyan */
+    background: linear-gradient(to bottom, #002f9e, #FFFFFF, #C8102E);
+    /* %90 Bulanıklık efekti */
+
 }
 
 /* Arkaplan Gradyanı ve Sallanma Efekti */
@@ -25,24 +50,10 @@ body::before {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* İngiltere bayrağı renklerinden gradyan */
-    background: linear-gradient(to bottom, #012169, #FFFFFF, #C8102E);
-    /* %90 Bulanıklık efekti */
-    filter: blur(15px);
-    /* Hafif sallanma animasyonu */
-    animation: wave-effect 10s infinite alternate ease-in-out;
     /* Kenarlardaki boşluğu kapatmak için ölçeklendirme */
     transform: scale(1.1);
 }
 
-@keyframes wave-effect {
-    from {
-        transform: scale(1.1) translateX(-5px) rotate(-0.5deg);
-    }
-    to {
-        transform: scale(1.1) translateX(5px) rotate(0.5deg);
-    }
-}
 
 /* --- Header ve Zaman Çizelgesi Stilleri --- */
 .header-container {
@@ -50,7 +61,7 @@ body::before {
     color: white;
     padding: 1px 0;
     background-color: rgba(0, 0, 0, 0.4); /* Hafif şeffaf arka plan */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 1px;
     position: relative;
     z-index: 10;
@@ -74,6 +85,9 @@ body::before {
     margin: 10px auto;
     padding: 30px 0;
     overflow: visible;
+    container-type: inline-size;
+    width: min(90%, 1800px);
+    margin-inline: auto;
 }
 
 .timeline-arrow {
@@ -81,12 +95,14 @@ body::before {
     top: 50%;
     left: 0;
     width: 100%;
-    height: 4px; /* Ok kalınlığı */
-    background: linear-gradient(to right, #00C9FF, #92FE9D); /* Gradyan ok */
+    height: 5px; /* Ok kalınlığı */
+    background: linear-gradient(to right, #ffffff, #002f9e); /* Gradyan ok */
     transform: translateY(-50%);
     z-index: 1;
     border-radius: 2px;
-    box-shadow: 0 0 15px rgba(146, 254, 157, 0.7); /* Parlama efekti */
+    box-shadow: 0 0 15px rgba(255, 56, 56, 0.7); /* Parlama efekti */
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .timeline-points {
@@ -99,6 +115,7 @@ body::before {
     position: relative;
     z-index: 2; /* Noktaların okun üzerinde olması için */
     flex-wrap: nowrap; /* Noktaların sarılmasını engelle */
+    gap: 10px;
 }
 
 .point {
@@ -118,6 +135,9 @@ body::before {
     padding: 0;
     box-sizing: border-box;
     margin-top: -15px; /* Yeni boyutun yarısı kadar yukarı kaydırıldı */
+    aspect-ratio: 1;
+    contain: layout style paint;
+    backface-visibility: hidden;
 }
 
 .point:hover {
@@ -211,10 +231,10 @@ body::before {
 }
 
 #content-container h2 {
-    color: #012169;
+    color: #002988;
     font-size: 2.2em;
     margin-top: 0;
-    border-bottom: 2px solid #2ecc71; /* Alt çizgi rengi yeşil yapıldı */
+    border-bottom: 2px solid #C8102E; /* Alt çizgi rengi yeşil yapıldı */
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -263,7 +283,7 @@ body::before {
 }
 
 .tense-table thead {
-    background-color: #012169; /* Koyu mavi başlık */
+    background-color: #002988; /* Koyu mavi başlık */
     color: white;
 }
 
@@ -292,19 +312,14 @@ body::before {
 
 /* Responsive Düzenlemeler */
 @media (max-width: 768px) {
-    .header-container h1 {
-        font-size: 2.2em;
-    }
-
-    .header-container p {
-        font-size: 1em;
-    }
-
-    .timeline-points {
-        flex-wrap: wrap; /* Küçük ekranlarda sarılma aktif */
-        justify-content: center; /* Ortalamaya devam */
-        gap: 15px; /* Mobil için boşluğu azalt */
-    }
+  /* Tüm mobil stilleri tek bir yerde topla */
+  .header-container h1 { font-size: 2.2em; }
+  .header-container p { font-size: 1em; }
+  .timeline-points { 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 
     .point {
         width: 22px; /* Mobil için boyut büyütüldü */
@@ -563,4 +578,14 @@ body::before {
     .point:hover {
         transform: none;
     }
+}
+
+/* Yeni container query */
+@container (max-width: 600px) {
+  .timeline-points {
+    gap: 10px;
+  }
+  .point {
+    aspect-ratio: 1;
+  }
 }

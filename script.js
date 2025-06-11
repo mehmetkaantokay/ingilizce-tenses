@@ -1,118 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Performance optimizations
-    const DOM = {
-        points: document.querySelectorAll('.point'),
-        contentContainer: document.getElementById('content-container'),
-        timeline: document.querySelector('.timeline-points')
-    };
-
-    let isTransitioning = false;
-    let currentTense = '';
-
-    // Optimized debounce function
-    const debounce = (func, wait) => {
-        let timeout;
-        return (...args) => {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(this, args), wait);
-        };
-    };
-
-    // Optimized content loading with transition
-    const loadContent = debounce(async (tenseKey) => {
-        if (isTransitioning || currentTense === tenseKey) return;
-        isTransitioning = true;
-        currentTense = tenseKey;
-
-        // Prepare transition
-        DOM.contentContainer.classList.add('content-transition', 'slide-out');
-
-        // Wait for animation frame for better performance
-        await new Promise(resolve => requestAnimationFrame(resolve));
-
-        // Update content
-        try {
-            const data = tenseData[tenseKey];
-            DOM.contentContainer.innerHTML = data ? `
-                <h2>${data.title}</h2>
-                ${data.content}
-            ` : `
-                <h2>Bilgi Bulunamadı</h2>
-                <p>Bu zaman hakkında detaylı bilgi henüz eklenmemiştir.</p>
-            `;
-
-            // Trigger reflow
-            DOM.contentContainer.offsetHeight;
-
-            // Animate in
-            DOM.contentContainer.classList.remove('slide-out');
-            DOM.contentContainer.classList.add('slide-in');
-        } catch (error) {
-            console.error('Content loading error:', error);
-        } finally {
-            isTransitioning = false;
-        }
-    }, 150);
-
-    // Event delegation for better performance
-    DOM.timeline.addEventListener('click', (e) => {
-        const point = e.target.closest('.point');
-        if (!point) return;
-
-        // Remove active class from all points
-        DOM.points.forEach(p => p.classList.remove('active'));
-        
-        // Add active class to clicked point
-        point.classList.add('active');
-        
-        // Load content
-        loadContent(point.dataset.tense);
-    }, { passive: true });
-
-    // Touch events optimization for mobile
-    if ('ontouchstart' in window) {
-        DOM.timeline.addEventListener('touchstart', (e) => {
-            const point = e.target.closest('.point');
-            if (!point) return;
-            point.style.transform = 'scale(0.95)';
-        }, { passive: true });
-
-        DOM.timeline.addEventListener('touchend', (e) => {
-            const point = e.target.closest('.point');
-            if (!point) return;
-            point.style.transform = '';
-        }, { passive: true });
-    }
-
-    // Initialize with first content
-    const initialPoint = document.querySelector('.point.location-marker[data-tense="present-continuous"]');
-    if (initialPoint) {
-        initialPoint.classList.add('active');
-        loadContent(initialPoint.dataset.tense);
-    }
-
-    // Intersection Observer for lazy loading
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    // Observe timeline points
-    DOM.points.forEach(point => observer.observe(point));
-    const points = document.querySelectorAll('.point');
-    const contentContainer = document.getElementById('content-container');
-    let activePoint = null; // Aktif olan noktayı takip etmek için
-
-    // Zamanların detaylı içeriklerini tutan nesne
-    // Uzun metinleri ve HTML'i buraya backtick (`) kullanarak güvenle ekleyebilirsiniz.
-    // Her bir tense'in 'content' özelliğini düzenleyeceksiniz.
+    // 1. Önce tenseData nesnesini tanımla
     const tenseData = {
         'past-perfect-continuous': {
             title: 'Past Perfect Continuous Tense (Sürekli Geçmiş Mükemmel Zaman)',
@@ -265,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>Had + I, You, He, She, It, We, They</td>
                             <td></td> <!-- Bu kısım boş kalacak çünkü 'had' zaten başta -->
                             <td>Verb (V3)?</td>
-                            <td>... yapmış mıydım/mıydı/mıydık vb.?</td>
+                            <td>... yapmakta mıydım/mıydı/mıydık vb.?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -739,7 +626,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>You, We, They</td>
                             <td>are</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapıyorsun/yapıyoruz/yapıyorlar.</td>
+                            <td>... yapıyorsun/yapıyoruz/yapıyorlardı vb.</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
@@ -1292,54 +1179,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Sayfa yüklendiğinde Present Continuous Tense'i aktif yap ve içeriğini göster
-    const presentContinuousDot = document.querySelector('.point.location-marker[data-tense="present-continuous"]');
-    if (presentContinuousDot) {
-        presentContinuousDot.classList.add('active'); // CSS ile büyüsün
-        const initialTenseData = tenseData[presentContinuousDot.dataset.tense];
-        if (initialTenseData) {
-            contentContainer.innerHTML = `
-                <h2>${initialTenseData.title}</h2>
-                ${initialTenseData.content}
+    // 2. DOM elementlerini tanımla
+    const elements = {
+        points: document.querySelectorAll('.point'),
+        contentContainer: document.getElementById('content-container'),
+        timeline: document.querySelector('.timeline-points')
+    };
+
+    // 3. State yönetimi
+    const state = {
+        activePoint: null,
+        isTransitioning: false
+    };
+
+    // 4. İçerik yükleme fonksiyonu
+    function loadContent(point) {
+        const tenseKey = point.dataset.tense;
+        const data = tenseData[tenseKey];
+
+        if (data) {
+            elements.contentContainer.innerHTML = `
+                <h2>${data.title}</h2>
+                ${data.content}
             `;
-            contentContainer.classList.add('visible'); // İçerik kutusunu görünür yap
+            elements.contentContainer.classList.add('visible');
+        } else {
+            elements.contentContainer.innerHTML = `
+                <h2>Bilgi Bulunamadı</h2>
+                <p>Bu zaman hakkında detaylı bilgi henüz eklenmemiştir.</p>
+            `;
+            elements.contentContainer.classList.add('visible');
         }
-        activePoint = presentContinuousDot; // İlk aktif noktayı ayarla
     }
 
-
-    // Her bir noktaya tıklama olayı atama
-    points.forEach(point => {
+    // 5. Event listener'ları ekle
+    elements.points.forEach(point => {
         point.addEventListener('click', (e) => {
-            // Mevcut aktif noktadan 'active' sınıfını kaldır
-            if (activePoint) {
-                activePoint.classList.remove('active');
+            if (state.activePoint) {
+                state.activePoint.classList.remove('active');
             }
             
-            // Tıklanan yeni noktayı aktif yap
             const clickedPoint = e.currentTarget;
             clickedPoint.classList.add('active');
-            activePoint = clickedPoint; // Aktif noktayı güncelle
+            state.activePoint = clickedPoint;
             
-            const tenseKey = clickedPoint.dataset.tense;
-            const data = tenseData[tenseKey];
-
-            if (data) {
-                // İçerik kutusunu yeni veriyle doldur
-                contentContainer.innerHTML = `
-                    <h2>${data.title}</h2>
-                    ${data.content}
-                `;
-                // İçerik kutusunu görünür yap (animasyon tetiklenir)
-                contentContainer.classList.add('visible');
-            } else {
-                // Eğer veri bulunamazsa varsayılan bir mesaj göster
-                contentContainer.innerHTML = `
-                    <h2>Bilgi Bulunamadı</h2>
-                    <p>Bu zaman hakkında detaylı bilgi henüz eklenmemiştir.</p>
-                `;
-                contentContainer.classList.add('visible');
-            }
+            loadContent(clickedPoint);
         });
     });
+
+    // 6. Başlangıç içeriğini yükle
+    const initialPoint = document.querySelector('.point.location-marker[data-tense="present-continuous"]');
+    if (initialPoint) {
+        initialPoint.classList.add('active');
+        state.activePoint = initialPoint;
+        loadContent(initialPoint);
+    }
 });

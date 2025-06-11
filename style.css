@@ -33,12 +33,10 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100%;
-    overflow-x: hidden; /* Genel yatay kaydırmayı engeller */
+    height: 100%;    overflow-x: hidden; /* Genel yatay kaydırmayı engeller */
     /* İngiltere bayrağı renklerinden gradyan */
     background: linear-gradient(to bottom, #002f9e, #FFFFFF, #C8102E);
     /* %90 Bulanıklık efekti */
-
 }
 
 /* Arkaplan Gradyanı ve Sallanma Efekti */
@@ -62,7 +60,7 @@ body::before {
     padding: 1px 0;
     background-color: rgba(0, 0, 0, 0.4); /* Hafif şeffaf arka plan */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1px;
+    margin-bottom: 0; /* Alt boşluğu kaldırdık */
     position: relative;
     z-index: 10;
 }
@@ -79,11 +77,10 @@ body::before {
 }
 
 .timeline-wrapper {
-    position: relative;
-    width: 90%; /* Genişlik en sola ve sağa uzatıldı */
-    max-width: 1800px; /* Maksimum genişlik daha da artırıldı */
-    margin: 10px auto;
-    padding: 30px 0;
+    position: relative;    width: 90%; /* Genişlik azaltıldı */
+    max-width: 1800px; /* Maksimum genişlik azaltıldı */
+    margin: 0 auto; /* Tüm marginleri sıfırladık */
+    padding: 40px 0; /* Üst ve alt boşluk arttırıldı */
     overflow: visible;
     container-type: inline-size;
     width: min(90%, 1800px);
@@ -137,12 +134,12 @@ body::before {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-between; /* Noktalar eşit aralıklarla yayıldı */
-    align-items: center; /* Dikeyde ortala (okun üzerine gelmesi için) */
+    justify-content: space-between; /* Noktaları eşit aralıklarla yay */
+    align-items: center;
     position: relative;
-    z-index: 2; /* Noktaların okun üzerinde olması için */
-    flex-wrap: nowrap; /* Noktaların sarılmasını engelle */
-    gap: 10px;
+    z-index: 2;
+    flex-wrap: nowrap;
+    width: 100%; /* Timeline'ın tüm genişliğini kullan */
 }
 
 .point {
@@ -319,7 +316,7 @@ body::before {
     border: 1px solid #ddd;
     text-align: left;
     vertical-align: top;
-    /* word-wrap: break-word; Eğer metinler taşarsa kelimeleri bölmek için eklenebilir */
+    word-wrap: break-word; /*Eğer metinler taşarsa kelimeleri bölmek için eklenebilir */
 }
 
 .tense-table th {
@@ -356,25 +353,27 @@ body::before {
 
 .sidebar-toggle {
     position: absolute;
-    right: -40px;
+    right: -65px; /* Genişliğe göre ayarlandı */
     top: 10px;
-    width: 40px;
-    height: 40px;
-    background-color: #002f9e;
+    width: 65px; /* Genişlik daha da arttırıldı */
+    height: 65px; /* Yükseklik daha da arttırıldı */
+    background-color: rgba(200, 16, 46, 0.7); /* Kırmızı renk %70 opaklık */
     border: none;
     color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
-    border-radius: 0 5px 5px 0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    font-size: 1.6em; /* Font boyutu daha da arttırıldı */
+    border-radius: 0 10px 10px 0; /* Border radius arttırıldı */
+    box-shadow: 3px 0 8px rgba(0, 0, 0, 0.25); /* Gölge efekti güçlendirildi */
+    transition: all 0.3s ease; /* Tüm geçişler için transition */
 }
 
 .sidebar-toggle:hover {
-    background-color: #C8102E;
+    background-color: #E31837; /* Daha açık kırmızı hover efekti */
+    box-shadow: 4px 0 12px rgba(200, 16, 46, 0.5); /* Hover'da gölge efekti güçlendirildi */
+    transform: scale(1.05); /* Hover'da hafif büyüme efekti */
 }
 
 .sidebar-content {
@@ -437,11 +436,10 @@ body::before {
 @media (max-width: 768px) {
   /* Tüm mobil stilleri tek bir yerde topla */
   .header-container h1 { font-size: 2.2em; }
-  .header-container p { font-size: 1em; }
-  .timeline-points { 
+  .header-container p { font-size: 1em; }  .timeline-points { 
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 25px; /* Mobil görünümde de mesafeyi arttırdık */
   }
 
     .point {
@@ -685,7 +683,7 @@ body::before {
 /* Yeni container query */
 @container (max-width: 600px) {
   .timeline-points {
-    gap: 10px;
+    gap: 20px; /* Container query için de mesafeyi arttırdık */
   }
   .point {
     aspect-ratio: 1;

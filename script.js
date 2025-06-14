@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Önce tenseData nesnesini tanımla
     const tenseData = {
-        'past-perfect-continuous': {
-            title: 'Past Perfect Continuous Tense (Sürekli Geçmiş Mükemmel Zaman)',
+        'past-perfect-continuous': { // Past Perfect Continuous Tense
+            title: 'Past Perfect Continuous Tense (Geçmiş Sürekli Mükemmel Zaman)',
             content: `
                 <p>Bu zaman, geçmişte belirli bir ana kadar devam etmiş olan bir eylemi anlatır. Genellikle, geçmişteki başka bir eylemden önce başlayan ve o eylem anına kadar süren bir durumu vurgulamak için kullanılır. Eylemin süresi veya o noktaya kadar devamlılığı önemlidir. Örneğin, "Annem geldiğinde iki saattir kitap okuyordum" cümlesinde, annenin gelme eylemi geçmişteki bir anı işaret ederken, kitap okuma eyleminin o ana kadar iki saattir devam ettiğini vurgular.</p>
 
@@ -12,28 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + had been + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + had been + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>had been working</strong> in the garden." (Ben bahçede çalışmaktaydım.)</li>
+                            <li>I <strong>had been studying</strong> English for hours (Ben saatlerdir İngilizce çalışıyordum.)</li>
                         </ul>
                     </li>
+
                     <li><strong>Olumsuz Cümleler:</strong> Özne + hadn't / had not been + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>hadn’t been studying</strong> English for two hours." (Ben iki saattir İngilizce çalışmamaktaydım.)</li>
+                            <li>I <strong>hadn't been studying</strong> English for hours. (Ben saatlerdir İngilizce çalışmamaktaydım/çalışmıyordum.)</li>
                         </ul>
                     </li>
+                    
                     <li><strong>Soru Cümleleri:</strong> Had + Özne + been + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "<strong>Had you been studying</strong> English since six o’clock?" (Sen saat altından beri İngilizce çalışmakta mıydın?)</li>
+                            <li><strong>Had you been studying</strong> English for hours? (Sen saatlerdir İngilizce çalışmakta mıydın/çalışıyor muydun?)</li>
                         </ul>
                     </li>
+                    
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + had + Özne + been + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "What <strong>had you been doing</strong> for two hours?" (Sen iki saattir ne yapmaktaydın?)</li>
+                            <li>How long <strong>had you been studying</strong> English? (Sen ne kadar süredir İngilizce çalışıyordun?)</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h4>Zaman Zarfları:</h4>
-                <p>For (boyunca), Since (den beri), By the time (e kadar), When (dığında).</p>
+                <p>For (boyunca), Since (-den beri), By the time (-e kadar), When (-dığında).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>Bu zaman, Past Continuous ile karıştırılabilir. Past Continuous, geçmişte belirli bir anda devam eden eylemi vurgularken, Past Perfect Continuous o ana kadar ne kadar süreyle devam ettiğini veya o ana kadar süregelen bir eylemi vurgular. Fiile "-ing" eki eklerken, fiilin son harfinin çiftlenmesi (örn: get -> getting) veya "e" harfinin düşmesi (örn: come -> coming) gibi yazım kurallarına dikkat edilmelidir.</p>
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
                             <th>Yardımcı Fiil</th>
-                            <th>Fiil (-ing)</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -55,21 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, He, She, It, We, They</td>
                             <td>had been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmaktaydım/yapmaktaydı/yapmaktaydık vb.</td>
+                            <td>... yapmaktaydım / yapmaktaydı / yapmaktaydık</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>hadn't been / had not been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmamaktaydım/yapmamaktaydı/yapmamaktaydık vb.</td>
+                            <td>... yapmamaktaydım / yapmamaktaydı / yapmamaktaydık</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Had + I, You, He, She, It, We, They</td>
                             <td>been</td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapmakta mıydım/mıydı/mıydık vb.?</td>
+                            <td>... yapmakta mıydım? / mıydı? / mıydık?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -84,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'past-perfect': {
-            title: 'Past Perfect Tense (Geçmiş Mükemmel Zaman)',
+        'past-perfect': { // Past Perfect Tense
+            title: 'Past Perfect Tense (Geçmiş -Mişli Mükemmel Zaman)',
             content: `
                 <p>Bu zaman, geçmişte gerçekleşen iki olaydan, daha önce tamamlanmış olanı ifade etmek için kullanılır. Genellikle "bir şey olmadan önce başka bir şey olmuştu" anlamını taşır. Geçmişteki bir eylemin, yine geçmişteki başka bir eylemden önce tamamlandığını belirtmek amacıyla kullanılır.</p>
 
@@ -95,28 +98,31 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + had + Verb (Past Participle - V3)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + had + Fiil (V3).
                         <ul>
-                            <li>Örnek: "I <strong>had cleaned</strong> the house." (Evi temizlemiştim.)</li>
+                            <li>I <strong>had studied</strong> English before. (Ben daha önce İngilizce çalışmıştım.)</li>
                         </ul>
                     </li>
+
                     <li><strong>Olumsuz Cümleler:</strong> Özne + hadn't / had not + Fiil (V3).
                         <ul>
-                            <li>Örnek: "She <strong>hadn't finished</strong> her work." (İşini bitirmemişti.)</li>
+                            <li>I <strong>hadn't studied</strong> English before. (Ben daha önce İngilizce çalışmamıştım.)</li>
                         </ul>
                     </li>
+
                     <li><strong>Soru Cümleleri:</strong> Had + Özne + Fiil (V3)?
                         <ul>
-                            <li>Örnek: "<strong>Had you seen</strong> that movie before?" (O filmi daha önce görmüş müydün?)</li>
+                            <li><strong>Had you studied</strong> English before? (Sen daha önce İngilizce çalışmış mıydın?)</li>
                         </ul>
                     </li>
+
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + had + Özne + Fiil (V3)?
                         <ul>
-                            <li>Örnek: "Where <strong>had they gone</strong>?" (Nereye gitmişlerdi?)</li>
+                            <li>What <strong>had you studied</strong> before? (Sen daha önce ne çalışmıştın?)</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h4>Zaman Zarfları:</h4>
-                <p>Before (den önce), After (den sonra), By the time (e kadar), Already (zaten), Never (hiç).</p>
+                <p>Before (-den önce), After (-den sonra), By the time (-e kadar), Already (zaten), Never (hiç).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>Bu zaman, geçmişteki olayların sıralamasını belirginleştirmek için çok önemlidir. Genellikle Simple Past Tense ile birlikte kullanılır ve hangi eylemin daha önce gerçekleştiğini açıkça gösterir. "Perfect" kelimesi, eylemin tamamlanmışlığını ifade eder ve bu durumda "have/has/had" yardımcı fiili ile fiilin üçüncü hali (V3) kullanılır.</p>
@@ -128,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
                             <th>Yardımcı Fiil</th>
-                            <th>Fiil (V3)</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -138,21 +144,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, He, She, It, We, They</td>
                             <td>had</td>
                             <td>Verb (V3)</td>
-                            <td>... yapmıştım/yapmıştı/yapmıştık vb.</td>
+                            <td>... yapmıştım / yapmıştı / yapmıştık</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>hadn't / had not</td>
                             <td>Verb (V3)</td>
-                            <td>... yapmamıştım/yapmamıştı/yapmamıştık vb.</td>
+                            <td>... yapmamıştım / yapmamıştı / yapmamıştık</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Had + I, You, He, She, It, We, They</td>
                             <td></td> <!-- Bu kısım boş kalacak çünkü 'had' zaten başta -->
                             <td>Verb (V3)?</td>
-                            <td>... yapmakta mıydım/mıydı/mıydık vb.?</td>
+                            <td>... yapmakta mıydım? / mıydı? / mıydık?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -167,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'past-continuous': {
+        'past-continuous': { // Past Continuous Tense
             title: 'Past Continuous Tense (Sürekli Geçmiş Zaman / Şimdiki Zamanın Hikayesi)',
             content: `
                 <p>Bu zaman, geçmişte belirli bir anda devam etmekte olan bir eylemi ifade eder. Genellikle, geçmişteki başka bir olayın kesintiye uğrattığı veya o sırada devam eden bir eylemi anlatmak için kullanılır. Eylemin o anki ilerleyişi vurgulanır. Örneğin, "Ben kitap okuyordum" cümlesi, eylemin geçmişte bir süre devam ettiğini belirtir.</p>
@@ -178,28 +184,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + was/were + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + was/were + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>was cleaning</strong> the house." (Evi temizliyordum.)</li>
+                            <li>I <strong>was studying</strong> English at 7 PM yesterday. (Ben dün akşam saat 7'de İngilizce çalışıyordum.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + wasn't / was not / weren't / were not + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>wasn’t sleeping</strong> when the phone rang." (Telefon çaldığında ben uyumuyordum.)</li>
+                            <li>I <strong>wasn't studying</strong> English at 7 PM yesterday. (Ben dün akşam saat 7'de İngilizce çalışmıyordum.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Was/Were + Özne + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "<strong>Were you listening</strong> to the minister’s last interview?" (Sen bakanın son röportajını dinliyor muydun?)</li>
+                            <li><strong>Were you studying</strong> English at 7 PM yesterday? (Sen dün akşam saat 7'de İngilizce çalışıyor muydun?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + was/were + Özne + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "What <strong>were you saying</strong>?" (Sen ne söylüyordun?)</li>
+                            <li>What <strong>were you studying</strong> at 7 PM yesterday? (Sen dün akşam saat 7'de ne çalışıyordun?)</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h4>Zaman Zarfları:</h4>
-                <p>While (iken), When (dığında), At that moment (o anda), Yesterday at 5 PM (dün akşam 5'te).</p>
+                <p>While (-iken), When (-dığında), At that moment (o anda), Yesterday at 5 PM (dün akşam 5'te).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>Fiile "-ing" eki ekleme kuralları (örn: "e" harfinin düşmesi, son harfinin çiftlenmesi) Past Continuous için de geçerlidir. Bir zaman adının içinde "Continuous" veya "Progressive" kelimeleri geçtiğinde, fiile "-ing" eki geldiğini unutmamak, bu zaman kipinin temel bir özelliğidir.</p>
@@ -211,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
                             <th>Yardımcı Fiil</th>
-                            <th>Fiil (-ing)</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -221,42 +227,42 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, He, She, It</td>
                             <td>was</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapıyordum/yapıyordu vb.</td>
+                            <td>... yapıyordum / yapıyordu</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>You, We, They</td>
                             <td>were</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapıyordun/yapıyorduk/yapıyorlardı vb.</td>
+                            <td>... yapıyordun / yapıyorduk / yapıyorlardı</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, He, She, It</td>
                             <td>wasn't / was not</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmıyordum/yapmıyordu vb.</td>
+                            <td>... yapmıyordum / yapmıyordu</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>You, We, They</td>
                             <td>weren't / were not</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmıyordun/yapmıyorduk/yapmıyorlardı vb.</td>
+                            <td>... yapmıyordun / yapmıyorduk / yapmıyorlardı</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Was + I, He, She, It</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapıyor muydum/muydu vb.?</td>
+                            <td>... yapıyor muydum? / muydu?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Were + You, We, They</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapıyor muydun/muyduk/mular mıydı vb.?</td>
+                            <td>... yapıyor muydun? / muyduk? / mular mıydı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -271,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'simple-past': {
+        'simple-past': { // Simple Past Tense
             title: 'Simple Past Tense (Basit Geçmiş Zaman)',
             content: `
                 <p>Bu zaman, geçmişte belirli bir zamanda başlayıp bitmiş, tamamlanmış eylemleri ifade eder. Eylemin ne zaman olduğu (belirli bir tarih, saat veya zaman ifadesiyle) önemlidir. Örneğin, "Evi temizledim" cümlesi, eylemin geçmişte tamamlandığını ve şu anla bir bağlantısının olmadığını belirtir.</p>
@@ -282,22 +288,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + Verb (Past Simple - V2)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + Fiil (V2).
                         <ul>
-                            <li>Örnek: "I <strong>cleaned</strong> the house." (Evi temizledim.)</li>
+                            <li>I <strong>studied</strong> English yesterday. (Ben dün İngilizce çalıştım.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + didn't / did not + Fiil (V1 - yalın hali).
                         <ul>
-                            <li>Örnek: "My sister <strong>didn’t go</strong> to school today." (Benim kardeşim bugün okula gitmedi.)</li>
+                            <li>I <strong>didn’t study</strong> English yesterday. (Ben dün İngilizce çalışmadım.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Did + Özne + Fiil (V1 - yalın hali)?
                         <ul>
-                            <li>Örnek: "<strong>Did you forget</strong> your identity card at the office?" (Sen kimlik kartını ofiste mı unuttun?)</li>
+                            <li><strong>Did you study</strong> English yesterday? (Sen dün İngilizce çalıştın mı?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + did + Özne + Fiil (V1 - yalın hali)?
                         <ul>
-                            <li>Örnek: "What <strong>did you do</strong> last night?" (Sen dün gece ne yaptın?)</li>
+                            <li>What <strong>did you study</strong> yesterday? (Sen dün ne çalıştın?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -314,7 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <tr>
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
-                            <th>Fiil / Yardımcı Fiil + Fiil</th>
+                            <th>Yardımcı Fiil</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -322,20 +329,23 @@ document.addEventListener('DOMContentLoaded', () => {
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
-                            <td>Verb (V2) (örn: cleaned, went)</td>
-                            <td>... yaptım/yaptı/yaptık vb.</td>
+			    <td></td>
+                            <td>Verb (V2)</td>
+                            <td>... yaptım / yaptı / yaptık</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
-                            <td>didn't / did not + Verb (V1)</td>
-                            <td>... yapmadım/yapmadı/yapmadık vb.</td>
+                            <td>didn't / did not</td>
+			    <td>Verb (V1)</td>
+                            <td>... yapmadım / yapmadı / yapmadık</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Did + I, You, He, She, It, We, They</td>
+			    <td></td>
                             <td>Verb (V1)?</td>
-                            <td>... yaptım mı/yaptı mı/yaptık mı vb.?</td>
+                            <td>... yaptım mı? / yaptı mı? / yaptık mı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -350,39 +360,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'present-perfect-continuous': {
-            title: 'Present Perfect Continuous Tense (Sürekli Şimdiki Mükemmel Zaman)',
+        'present-perfect-continuous': { // Present Perfect Continuous Tense
+            title: 'Present Perfect Continuous Tense (Şimdiki Sürekli Mükemmel Zaman)',
             content: `
                 <p>Bu zaman, geçmişte başlayıp hala devam eden veya yakın zamanda bitmiş ancak etkisi hala süren eylemleri anlatır. Eylemin süresi veya devamlılığı vurgulanır. Örneğin, "İki yıldır İngilizce çalışmaktayım" cümlesi, İngilizce çalışma eyleminin geçmişte başladığını ve hala devam ettiğini belirtir.</p>
 
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, özneye göre değişen yardımcı fiiller içerir.</p>
-                <ul>
+                <ul>    
                     <li><strong>Yapısı:</strong> Subject + have/has been + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + have/has been + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>have been studying</strong> English for two years." (Ben iki yıldır İngilizce çalışmaktayım.)</li>
+                            <li>I <strong>have been studying</strong> English since morning. (Ben sabahtan beri İngilizce çalışmaktayım/çalışıyorum.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + haven't / have not / hasn't / has not been + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>haven’t been hearing</strong> you." (Ben sizi duymamaktayım.)</li>
+                            <li>I <strong>haven’t been studying</strong> English since morning. (Ben sabahtan beri İngilizce çalışmamaktayım/çalışmıyorum.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Have/Has + Özne + been + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "<strong>How long have you been studying</strong> English?" (Siz ne kadar zamandır İngilizce çalışmaktasınız?)</li>
+                            <li><strong>Have you been studying</strong> English since morning? (Sen sabahtan beri İngilizce çalışmakta mıydın/çalışıyor muydun?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + have/has + Özne + been + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "What <strong>have you been wearing</strong> today?" (Sen bugün ne giymektesin?)</li>
+                            <li>How long<strong>have you been studying</strong> English? (Sen ne kadar süredir İngilizce çalışıyorsun?)</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h4>Zaman Zarfları:</h4>
-                <p>For (boyunca), Since (den beri), All day/morning/week (tüm gün/sabah/hafta), Recently (son zamanlarda), Lately (son zamanlarda).</p>
+                <p>For (boyunca), Since (-den beri), All day/morning/week (tüm gün/sabah/hafta), Recently (son zamanlarda), Lately (son zamanlarda).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>Bu zaman, eylemin süresine ve hala devam etmesine odaklanır. Present Perfect Tense ile karşılaştırıldığında, bu zaman eylemin devamlılığını vurgular, Present Perfect ise eylemin sonucunu veya tamamlanmışlığını vurgular. Fiile "-ing" eki ekleme kuralları burada da geçerlidir.</p>
@@ -394,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
                             <th>Yardımcı Fiil</th>
-                            <th>Fiil (-ing)</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -404,35 +414,35 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, We, They</td>
                             <td>have been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmaktayım/yapmaktasın/yapmaktayız/yapmaktalar vb.</td>
+                            <td>... yapmaktayım / yapmaktasın / yapmaktayız / yapmaktalar</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>He, She, It</td>
                             <td>has been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmaktadır vb.</td>
+                            <td>... yapmaktadır</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, We, They</td>
                             <td>haven't been / have not been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmamaktayım/yapmamaktasın/yapmamaktayız/yapmamaktalar vb.</td>
+                            <td>... yapmamaktayım / yapmamaktasın / yapmamaktayız / yapmamaktalar</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
                             <td>hasn't been / has not been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmamaktadır vb.</td>
+                            <td>... yapmamaktadır</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Have + I, You, We, They</td>
                             <td>been</td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapmakta mıyım/mısın/mıyız/mılar mı vb.?</td>
+                            <td>... yapmakta mıyım? / mısın? / mıyız? / mılar mı?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
@@ -454,39 +464,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'present-perfect': {
-            title: 'Present Perfect Tense (Şimdiki Mükemmel Zaman)',
+        'present-perfect': { // Present Perfect Tense
+            title: 'Present Perfect Tense (Geçmiş Yakın Zaman)',
             content: `
                 <p>Bu zaman, geçmişte başlayıp şimdiyle bağlantısı olan, etkisi hala devam eden veya yeni bitmiş eylemleri ifade eder. Eylemin ne zaman olduğu değil, sonucunun veya deneyiminin şu anki durumuyla bağlantısı önemlidir. Örneğin, "Evi temizledim" cümlesi, eylemin geçmişte tamamlandığını ancak sonucunun (evin şu an temiz olması) hala geçerli olduğunu belirtir.</p>
 
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, özneye göre değişen yardımcı fiiller içerir.</p>
-                <ul>
+                <ul>    
                     <li><strong>Yapısı:</strong> Subject + have/has + Verb (Past Participle - V3)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + have/has + Fiil (V3).
                         <ul>
-                            <li>Örnek: "I <strong>have cleaned</strong> the house." (Evi temizledim.)</li>
+                            <li>I <strong>have studied</strong> English recently. (Ben son zamanlarda İngilizce çalıştım/çalışmışımdır.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + haven't / have not / hasn't / has not + Fiil (V3).
                         <ul>
-                            <li>Örnek: "She <strong>hasn't finished</strong> her report yet." (Raporunu henüz bitirmedi.)</li>
+                            <li>I <strong>haven't studied</strong> English recently. (Ben son zamanlarda İngilizce çalışmadım/çalışmamışımdır.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Have/Has + Özne + Fiil (V3)?
                         <ul>
-                            <li>Örnek: "<strong>Have you ever been</strong> to Japan?" (Japonya'ya hiç gittin mi?)</li>
+                            <li><strong>Have you studied</strong> English recently? (Sen son zamanlarda İngilizce çalıştın mı/çalışmış mısındır?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + have/has + Özne + Fiil (V3)?
                         <ul>
-                            <li>Örnek: "What <strong>have you done</strong> today?" (Bugün ne yaptın?)</li>
+                            <li>What <strong>have you studied</strong> recently? (Sen son zamanlarda ne çalıştın/çalışmışsındır?)</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h4>Zaman Zarfları:</h4>
-                <p>Just (henüz), Already (zaten), Yet (henüz - olumsuz/soru), Ever (hiç - soru), Never (hiç - olumlu), For (boyunca), Since (den beri), So far (şimdiye kadar), Lately (son zamanlarda).</p>
+                <p>Just (henüz), Already (zaten), Never (hiç - olumlu), Yet (henüz - olumsuz/soru), Ever (hiç - soru), For (boyunca), Since (-den beri), So far (şimdiye kadar), Lately (son zamanlarda).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>Bu zaman, Türkçedeki "yaptım" veya "yapmış bulunuyorum" gibi çevirilerle karıştırılabilir. Anahtar fark, eylemin geçmişte tamamlanmış olmasına rağmen, sonucunun veya deneyiminin şu anki durumla ilgili olmasıdır. "Perfect" kelimesi, eylemin tamamlanmışlığını ifade eder ve bu durumda "have/has/had" yardımcı fiili ile fiilin üçüncü hali (V3) kullanılır.</p>
@@ -498,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
                             <th>Yardımcı Fiil</th>
-                            <th>Fiil (V3)</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -508,7 +518,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, We, They</td>
                             <td>have</td>
                             <td>Verb (V3)</td>
-                            <td>... yaptım/yaptın/yaptık/yaptılar vb.</td>
+                            <td>... yaptım / yaptın / yaptık / yaptılar</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
@@ -522,21 +532,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, We, They</td>
                             <td>haven't / have not</td>
                             <td>Verb (V3)</td>
-                            <td>... yapmadım/yapmadın/yapmadık/yapmadılar vb.</td>
+                            <td>... yapmadım / yapmadın / yapmadık / yapmadılar</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
                             <td>hasn't / has not</td>
                             <td>Verb (V3)</td>
-                            <td>... yapmadı vb.</td>
+                            <td>... yapmadı</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Have + I, You, We, They</td>
                             <td></td>
                             <td>Verb (V3)?</td>
-                            <td>... yaptım mı/yaptın mı/yaptık mı/yaptılar mı vb.?</td>
+                            <td>... yaptım mı? / yaptın mı? / yaptık mı? / yaptılar mı?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
@@ -559,7 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         'present-continuous': { // Present Continuous Tense içeriği
-            title: 'Present Continuous Tense (Sürekli Şimdiki Zaman)',
+            title: 'Present Continuous Tense (Şimdiki Zaman)',
             content: `
                 <p>Bu zaman, konuşma anında devam eden, geçici olan veya yakın gelecekte kesinleşmiş planları ifade eden eylemleri anlatır. Örneğin, "Şu anda evi temizliyorum" cümlesi, eylemin tam o anda devam ettiğini belirtir.</p>
 
@@ -569,22 +579,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + am/is/are + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + am/is/are + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>am cleaning</strong> the house." (Evi temizliyorum.)</li>
+                            <li>I <strong>am studying</strong> English now. (Ben şu anda İngilizce çalışıyorum.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + am not / isn't / is not / aren't / are not + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "My mother <strong>isn’t cooking</strong> now." (Benim annem şimdi yemek pişirmiyor.)</li>
+                            <li>I <strong>am not studying</strong> English now. (Ben şu anda İngilizce çalışmıyorum.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Am/Is/Are + Özne + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "<strong>Are you wearing</strong> your raincoat?" (Sen yağmurluğunu giyiyor musun?)</li>
+                            <li><strong>Are you studying</strong> English now? (Sen şu anda İngilizce çalışıyor musun?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + am/is/are + Özne + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "What <strong>are you doing</strong> now?" (Sen şu anda ne yapıyorsun?)</li>
+                            <li>What <strong>are you studying</strong> now? (Sen şu anda ne çalışıyorsun?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -602,7 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
                             <th>Yardımcı Fiil</th>
-                            <th>Fiil (-ing)</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -626,7 +636,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>You, We, They</td>
                             <td>are</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapıyorsun/yapıyoruz/yapıyorlardı vb.</td>
+                            <td>... yapıyorsun / yapıyoruz / yapıyorlardı</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
@@ -647,7 +657,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>You, We, They</td>
                             <td>aren't / are not</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmıyorsun/yapmıyoruz/yapmıyorlar.</td>
+                            <td>... yapmıyorsun / yapmıyoruz / yapmıyorlar.</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
@@ -668,7 +678,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>Are + You, We, They</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapıyor musun/muyuz/mular mı?</td>
+                            <td>... yapıyor musun? / muyuz? / mular mı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -683,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'simple-present': { // Bu, HTML'deki data-tense ile aynı olmalı
+        'simple-present': { // Simple Present Tense
             title: 'Simple Present Tense (Basit Şimdiki Zaman / Geniş Zaman)',
             content: `
                 <p>Bu zaman, alışkanlıkları, rutinleri, genel gerçekleri, bilimsel olguları ve tekrarlanan eylemleri ifade eder. Eylemin belirli bir anda değil, genel olarak veya her zaman yapıldığını belirtir. Örneğin, "Evi her gün temizlerim" cümlesi, bu eylemin bir alışkanlık olduğunu ifade eder.</p>
@@ -694,24 +704,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + Verb (Base Form - V1)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + Fiil (V1).
                         <ul>
-                            <li>Örnek: "I <strong>clean</strong> the house every day." (Evi her gün temizlerim.)</li>
+                            <li>I <strong>study</strong> English every day. (Ben her gün İngilizce çalışırım.)</li>
                             <li>Önemli Not: He/She/It özneleri için fiile "-s" veya "-es" takısı eklenir.</li>
-                            <li>Örnek: "She <strong>loves</strong> me." (O, beni sever.)</li>
+                            <li>She <strong>studies</strong> English every day. (O her gün İngilizce çalışır.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + don't / do not / doesn't / does not + Fiil (V1 - yalın hali).
                         <ul>
-                            <li>Örnek: "They <strong>don’t clean</strong> their room every day." (Onlar her gün odalarını temizlemezler.)</li>
+                            <li>I <strong>don’t study</strong> English every day. (Ben her gün İngilizce çalışmam.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Do/Does + Özne + Fiil (V1 - yalın hali)?
                         <ul>
-                            <li>Örnek: "<strong>Do you surf</strong> the Internet every day?" (Her gün internette sörf yapar mısın?)</li>
+                            <li><strong>Do you study</strong> English every day? (Sen her gün İngilizce çalışır mısın/çalışıyor musun?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + do/does + Özne + Fiil (V1 - yalın hali)?
                         <ul>
-                            <li>Örnek: "What <strong>do you do</strong>?" (Sen ne yaparsın?)</li>
+                            <li>What <strong>do you study</strong> every day? (Sen her gün ne çalışırsın?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -728,7 +738,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <tr>
                             <th>Cümle Tipi</th>
                             <th>Özne (Subject)</th>
-                            <th>Fiil / Yardımcı Fiil + Fiil</th>
+                            <th>Yardımcı Fiil</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
@@ -736,36 +747,42 @@ document.addEventListener('DOMContentLoaded', () => {
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>I, You, He, She, It, We, They</td>
-                            <td>Verb (V1) (örn: clean, go)</td>
-                            <td>... yaparım/yaparsın/yaparız/yaparlar vb.</td>
+			    <td></td>
+                            <td>Verb (V1)</td>
+                            <td>... yaparım / yaparsın / yaparız / yaparlar</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
                             <td>He, She, It</td>
-                            <td>Verb (V1 + -s/-es) (örn: cleans, goes)</td>
-                            <td>... yapar vb.</td>
+			    <td></td>
+                            <td>Verb (V1 + -s/-es)</td>
+                            <td>... yapar</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
-                            <td>don't / do not + Verb (V1)</td>
-                            <td>... yapmam/yapmazsın/yapmayız/yapmazlar vb.</td>
+			    <td>don't / do not</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapmam / yapmazsın / yapmayız / yapmazlar</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>He, She, It</td>
-                            <td>doesn't / does not + Verb (V1)</td>
-                            <td>... yapmaz vb.</td>
+			    <td>doesn't / does not</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapmaz</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Do + I, You, We, They</td>
+			    <td></td>
                             <td>Verb (V1)?</td>
-                            <td>... yaparım mı/yaparsın mı/yaparız mı/yaparlar mı vb.?</td>
+                            <td>... yaparım mı? / yaparsın mı? / yaparız mı? / yaparlar mı?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Does + He, She, It</td>
+			    <td></td>
                             <td>Verb (V1)?</td>
                             <td>... yapar mı?</td>
                         </tr>
@@ -782,138 +799,188 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'simple-future': {
+        'simple-future': { // Simple Future Tense
             title: 'Simple Future Tense (Basit Gelecek Zaman)',
             content: `
                 <p>Bu zaman, gelecekteki eylemleri, tahminleri, kararları veya planları ifade etmek için kullanılır. Genellikle "will" veya "be going to" yapılarıyla ifade edilir. Örneğin, "Evi daha sonra temizleyeceğim" veya "Bu öğleden sonra evi temizleyeceğim" cümleleri, gelecekteki bir eylemi belirtir.</p>
 
                 <h4>Kurallar:</h4>
                 <p>Simple Future Tense, "will" ve "be going to" olmak üzere iki farklı yapıyla ifade edilir. Her iki yapının da kendi kullanım alanları vardır.</p>
-                <ul>
-                    <li><strong>Yapısı (Will):</strong> Subject + will + Verb (Base Form - V1)</li>
-                    <li><strong>Olumlu Cümleler:</strong> Özne + will + Fiil (V1).
-                        <ul>
-                            <li>Örnek: "I <strong>will clean</strong> the house." (Evi temizleyeceğim.)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Olumsuz Cümleler:</strong> Özne + won't / will not + Fiil (V1).
-                        <ul>
-                            <li>Örnek: "She <strong>won't come</strong> to the party." (Partiye gelmeyecek.)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Soru Cümleleri:</strong> Will + Özne + Fiil (V1)?
-                        <ul>
-                            <li>Örnek: "<strong>Will you help</strong> me?" (Bana yardım edecek misin?)</li>
-                        </ul>
-                    </li>
-                    <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + Fiil (V1)?
-                        <ul>
-                            <li>Örnek: "When <strong>will they arrive</strong>?" (Ne zaman varacaklar?)</li>
-                        </ul>
-                    </li>
-                </ul>
 
+            <h4>Will</h4>
+                <ul>
+                    <li><strong>Yapısı:</strong> Subject + will + verb (base form - V1)</li>
+                    <li><strong>Kullanım Alanları:</strong> Anlık kararlar, söz verme, teklifler, kanıta dayanmayan tahminler.</li>
+                    <li><strong>Olumlu Cümleler:</strong>
+                <ul>
+                    <li>I <strong>will study</strong> English tomorrow. (Ben yarın İngilizce çalışacağım.) <i>(Bu kararı şimdi verdim; ani bir fikir.)</i></li>
+                </ul>
+			        <li><strong>Olumsuz Cümleler:</strong>
+                <ul>
+                    <li>I <strong>will not (won't) study</strong> English tomorrow. (Ben yarın İngilizce çalışmayacağım.) <i>(Şimdi karar verdim ki çalışmayacağım.)</i></li>
+                </ul>
+			        <li><strong>Soru Cümleleri:</strong>
+                <ul>
+                    <li><strong>Will you study</strong> English tomorrow? (Yarın İngilizce çalışacak mısın?) <i>(Genel bir merak veya o anki niyetini soruyorum.)</i></li>
+                </ul>
+                    <li><strong>Wh-Soruları:</strong>
+                <ul>
+                    <li>What <strong>will you study</strong> tomorrow? (Yarın ne çalışacaksın?) <i>(O an ne yapmayı düşündüğünü soruyorum.)</i></li>
+                </ul>
+                </li>
+                </ul>
+        <hr>
+        <h4>Be Going To</h4>
+            <ul>
+                <li><strong>Yapısı:</strong> Subject + am/is/are + going to + verb (base form - V1)</li>
+                <li><strong>Kullanım Alanları:</strong> Önceden yapılmış planlar, niyetler, mevcut kanıtlara dayalı tahminler.</li>
+                <li><strong>Olumlu Cümleler:</strong>
+            <ul>
+                <li>I <strong>am going to study</strong> English tomorrow. (Ben yarın İngilizce çalışacağım.) <i>(Bu benim önceden yapılmış planım; belki bir sınavım var.)</i></li>
+            </ul>
+		        <li><strong>Olumsuz Cümleler:</strong>
+            <ul>
+                <li>I <strong>am not (aren't) going to study</strong> English tomorrow. (Ben yarın İngilizce çalışmayacağım.) <i>(Önceden yaptığım planım iptal oldu.)</i></li>
+            </ul>
+		        <li><strong>Soru Cümleleri:</strong>
+            <ul>
+                <li><strong>Are you going to study</strong> English tomorrow? (Yarın İngilizce çalışacak mısın?) <i>(Planının bu olup olmadığını soruyorum.)</i></li>
+            </ul>
+			    <li><strong>Wh-Soruları:</strong>
+            <ul>
+                <li>When <strong>are you going to study</strong> English tomorrow? (Yarın ne zaman İngilizce çalışacaksın?) <i>(Planladığı belirli bir zamanı soruyorum.)</i></li>
+            </ul>    
+            </li>
+    </ul>
+</ul>
                 <h4>Zaman Zarfları:</h4>
                 <p>Tomorrow (yarın), Next week/month/year (gelecek hafta/ay/yıl), Soon (yakında), In the future (gelecekte).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>"Will" genellikle anlık kararlar, spontane teklifler, kanıtsız tahminler veya sözler için kullanılırken; "be going to" daha çok önceden yapılmış planlar, niyetler veya belirgin kanıtlara dayalı tahminlar için kullanılır. Her iki yapının da Türkçeye "yapacağım" olarak çevrilebilmesi, aralarındaki nüansı kavramayı önemli kılar. "Be going to" yapısında, "to be" yardımcı fiili (am/is/are) özneye göre çekimlenir.</p>
+                <h4>"Will" ve "Be Going To" Özet Tablosu</h4>
+                <table class="tense-table">
+                    <thead>
+                        <tr>
+                            <th>Özellik</th>
+                            <th>Will</th>
+                            <th>Be Going To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kararlar</strong></td>
+                            <td>Konuşma anında, anlık kararlar (spontane)</td>
+                            <td>Önceden planlanmış, niyetler, kararlar</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tahminler</strong></td>
+                            <td>Kanıtsız, kişisel görüşe dayalı tahminler</td>
+                            <td>Mevcut kanıtlara, gözlemlere dayalı tahminler</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diğer Kullanım Alanları</strong></td>
+                            <td>Söz verme, teklif, rica, tehdit</td>
+                            <td>Yakın gelecekte gerçekleşecek kesin veya kaçınılmaz olaylar</td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <h4>Simple Future Tense Yapısı (Will ve Be Going To Karşılaştırması):</h4>
                 <table class="tense-table">
                     <thead>
                         <tr>
                             <th>Cümle Tipi</th>
-                            <th>Yapı</th>
                             <th>Özne (Subject)</th>
-                            <th>Yardımcı Fiil + Fiil</th>
+                            <th>Yardımcı Fiil</th>
+                            <th>Fiil</th>
                             <th>Türkçesi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
-                            <td>Will</td>
                             <td>I, You, He, She, It, We, They</td>
-                            <td>will + Verb (V1)</td>
-                            <td>... yapacağım/yapacak vb.</td>
+			    <td>will</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapacağım / yapacak</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
-                            <td>Be Going To</td>
                             <td>I</td>
-                            <td>am going to + Verb (V1)</td>
-                            <td>... yapacağım.</td>
+                            <td>am going to</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapacağım</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
-                            <td></td>
                             <td>He, She, It</td>
-                            <td>is going to + Verb (V1)</td>
-                            <td>... yapacak.</td>
+                            <td>is going to</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapacak</td>
                         </tr>
                         <tr>
                             <td style="color: #2ecc71;"><strong>Olumlu</strong></td>
-                            <td></td>
                             <td>You, We, They</td>
-                            <td>are going to + Verb (V1)</td>
-                            <td>... yapacaksın/yapacağız/yapacaklar.</td>
+                            <td>are going to</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapacaksın / yapacağız / yapacaklar</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
-                            <td>Will</td>
                             <td>I, You, He, She, It, We, They</td>
-                            <td>won't / will not + Verb (V1)</td>
-                            <td>... yapmayacağım/yapmayacak vb.</td>
+                            <td>won't / will not</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapmayacağım / yapmayacak</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
-                            <td>Be Going To</td>
                             <td>I</td>
-                            <td>am not going to + Verb (V1)</td>
-                            <td>... yapmayacağım.</td>
+                            <td>am not going to</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapmayacağım</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
-                            <td></td>
                             <td>He, She, It</td>
-                            <td>isn't / is not going to + Verb (V1)</td>
-                            <td>... yapmayacak.</td>
+                            <td>isn't / is not going to</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapmayacak</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
-                            <td></td>
                             <td>You, We, They</td>
-                            <td>aren't / are not going to + Verb (V1)</td>
-                            <td>... yapmayacaksın/yapmayacağız/yapmayacaklar.</td>
+                            <td>aren't / are not going to</td>
+                            <td>Verb (V1)</td>
+                            <td>... yapmayacaksın / yapmayacağız / yapmayacaklar</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
-                            <td>Will</td>
-                            <td>Will + I, You, He, She, It, We, They</td>
+                            <td>Will+ I, You, He, She, It, We, They</td>
+                            <td></td>
                             <td>Verb (V1)?</td>
-                            <td>... yapacak mıyım/mısın/mı vb.?</td>
+                            <td>... yapacak mıyım? / mısın? /mı?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
-                            <td>Be Going To</td>
                             <td>Am + I</td>
-                            <td>going to + Verb (V1)?</td>
+                            <td>going to</td>
+                            <td>Verb (V1)?</td>
                             <td>... yapacak mıyım?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
-                            <td></td>
                             <td>Is + He, She, It</td>
-                            <td>going to + Verb (V1)?</td>
+                            <td>going to</td>
+                            <td>Verb (V1)?</td>
                             <td>... yapacak mı?</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
-                            <td></td>
                             <td>Are + You, We, They</td>
-                            <td>going to + Verb (V1)?</td>
-                            <td>... yapacak mısın/mıyız/mular mı?</td>
+                            <td>going to</td>
+                            <td>Verb (V1)?</td>
+                            <td>... yapacak mısın? / mıyız? / mular mı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -928,7 +995,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'future-continuous': {
+        'future-continuous': { // Future Continuous Tense
             title: 'Future Continuous Tense (Sürekli Gelecek Zaman)',
             content: `
                 <p>Bu zaman, gelecekte belirli bir anda devam etmekte olacak bir eylemi ifade eder. Gelecekteki bir noktada ne yapıyor olunacağını veya neyin devam ediyor olacağını anlatır. Örneğin, "Yarın bu saatlerde evi temizliyor olacağım" cümlesi, eylemin gelecekteki belirli bir zamanda devamlılığını vurgular.</p>
@@ -939,22 +1006,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + will be + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + will be + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>will be working</strong> tomorrow." (Ben yarın çalışıyor olacağım.)</li>
+                            <li>I <strong>will be studying</strong> English at this time tomorrow. (Ben yarın bu saatlerde İngilizce çalışıyor olacağım.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + won't / will not be + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>won’t be working</strong> tomorrow." (Ben yarın çalışıyor olmayacağım.)</li>
+                            <li>I <strong>will not be studying</strong> English at this time tomorrow. (Ben yarın bu saatlerde İngilizce çalışıyor olmayacağım.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Will + Özne + be + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "<strong>Will you be dancing</strong> with Tan Sağtürk?" (Sen Tan Sağtürk’le dans ediyor olacak mısın?)</li>
+                            <li><strong>Will you be studying</strong> English at this time tomorrow. (Sen yarın bu saatlerde İngilizce çalışıyor olacak mıyım?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + be + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "What <strong>will you be cooking</strong>?" (Ne yemek yapıyor olacaksınız?)</li>
+                            <li>What <strong>will you be studying</strong> at this time tomorrow? (Sen yarın bu saatlerde ne çalışıyor olacağım?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -982,21 +1049,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, He, She, It, We, They</td>
                             <td>will be</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapıyor olacağım/olacaksın/olacak vb.</td>
+                            <td>... yapıyor olacağım / olacaksın / olacak</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't be / will not be</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapıyor olmayacağım/olmayacaksın/olmayacak vb.</td>
+                            <td>... yapıyor olmayacağım / olmayacaksın / olmayacak</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>be</td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapıyor olacak mıyım/mısın/mı vb.?</td>
+                            <td>... yapıyor olacak mıyım? / mısın? / mı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1011,10 +1078,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'future-perfect': {
+        'future-perfect': { // Future Perfect Tense
             title: 'Future Perfect Tense (Gelecek Mükemmel Zaman)',
             content: `
                 <p>Bu zaman, gelecekte belirli bir zamandan önce tamamlanmış olacak bir eylemi ifade eder. Eylemin gelecekteki bir noktada kesinlikle bitmiş olacağını vurgular. Örneğin, "Annemler gelene kadar evi temizlemiş olacağım" cümlesi, eylemin gelecekteki bir zamandan (annemlerin gelmesi) önce tamamlanacağını belirtir.</p>
+
 
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, tüm özneler için tutarlıdır.</p>
@@ -1022,28 +1090,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + will have + Verb (Past Participle - V3)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + will have + Fiil (V3).
                         <ul>
-                            <li>Örnek: "I <strong>will have finished</strong> my homework before the deadline." (Teslim tarihinden önce ödevimi bitirmiş olacağım.)</li>
+                            <li>I <strong>will have studied</strong> English until tomorrow. (Ben yarına kadar İngilizce çalışmış olacağım.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + won't / will not have + Fiil (V3).
                         <ul>
-                            <li>Örnek: "I <strong>will not have finished</strong> the phone call." (Ben telefon konuşmamı bitirmiş olmayacağım.)</li>
+                            <li>I <strong>will not have studied</strong> English until tomorrow. (Ben yarına kadar İngilizce çalışmış olmayacağım.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Will + Özne + have + Fiil (V3)?
                         <ul>
-                            <li>Örnek: "<strong>Will you have been graduated</strong> next year?" (Sen önümüzdeki yıl mezun olmuş olacak mısın?)</li>
+                            <li><strong>Will you have studied</strong> Engilsh until tomorrow? (Sen yarına kadar İngilizce çalışmış olacak mısın?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + have + Fiil (V3)?
                         <ul>
-                            <li>Örnek: "What <strong>will you have eaten</strong> before the operation?" (Sen ameliyattan önce ne yemiş olacaksın?)</li>
+                            <li>What <strong>will you have studied</strong> until tomorrow? (Sen yarına kadar ne çalışmış olacaksın?)</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h4>Zaman Zarfları:</h4>
-                <p>By (e kadar), By the time (e kadar), Before (den önce).</p>
+                <p>By (-e kadar), By the time (-e kadar), Before (-den önce).</p>
 
                 <h4>Önemli Notlar:</h4>
                 <p>Bu zaman, gelecekteki bir noktadan önce tamamlanacak eylemlere odaklanır. "Have" yardımcı fiili, özneden bağımsız olarak her zaman "have" olarak kalır, "has" olmaz. Bu durum, yardımcı fiillerin bir araya geldiği durumlarda, zaman ve özneye göre çekimlenen ilk yardımcı fiil olmasından kaynaklanır.</p>
@@ -1094,7 +1162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             `
         },
-        'future-perfect-continuous': { // HTML'deki yeni data-tense ile uyumlu
+        'future-perfect-continuous': { // Future Perfect Continuous Tense
             title: 'Future Perfect Continuous Tense (Sürekli Gelecek Mükemmel Zaman)',
             content: `
                 <p>Bu zaman, gelecekte belirli bir ana kadar devam etmekte olacak bir eylemi ifade eder. Eylemin gelecekteki o noktaya kadar süreceğini ve o noktada hala devam ediyor olacağını vurgular. Örneğin, "Gece yarısına kadar altı saattir evi temizliyor olacağım" cümlesi, gelecekteki bir noktada (gece yarısı) eylemin (evi temizleme) belirli bir süredir devam ediyor olacağını belirtir.</p>
@@ -1105,22 +1173,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Yapısı:</strong> Subject + will have been + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + will have been + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>will have been working</strong> in the garden tomorrow." (Ben yarın bahçede çalışmaktaydım.)</li>
+                            <li>I <strong>will have been studying</strong> English for a year by tomorrow. (Ben yarına kadar bir yıldır İngilizce çalışıyor olacağım.)</li>
                         </ul>
                     </li>
                     <li><strong>Olumsuz Cümleler:</strong> Özne + won't / will not have been + Fiil (-ing).
                         <ul>
-                            <li>Örnek: "I <strong>will not have been going</strong> to Ankara tomorrow." (Ben yarın Ankara’ya gitmekte olmayacağım.)</li>
+                            <li>I <strong>will not have been studying</strong> English for a year by tomorrow. (Ben yarına kadar bir yıldır İngilizce çalışıyor olmayacağım.)</li>
                         </ul>
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Will + Özne + have been + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "<strong>Will you have been working</strong> in your office tomorrow?" (Sen yarın ofisinde çalışma olacak mısın?)</li>
+                            <li><strong>Will you have been studying</strong> English for a year by tomorrow.? (Sen yarına kadar bir yıldır İngilizce çalışıyor olacak mısın?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + have been + Fiil (-ing)?
                         <ul>
-                            <li>Örnek: "What <strong>will you have been doing</strong> this Saturday?" (Bu cumartesi ne yapmakta olacaksın?)</li>
+                            <li>How long, <strong>will you have been studying</strong> English by tomorrow.? (Sen yarına kadar ne kadar süredir İngilizce çalışıyor olacaksın?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -1257,6 +1325,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 sidebar.classList.remove('open');
                 body.classList.remove('sidebar-open');
             }
+        });
+    });    // Yukarı Çık butonu işlevselliği
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    // Sayfa scroll edildiğinde butonun görünürlüğünü kontrol et
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // 300px aşağı kaydırıldığında buton görünür olur
+            scrollToTopBtn.style.display = 'flex';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+    
+    // Butona tıklayınca sayfanın en üstüne çık
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Yumuşak kaydırma efekti
         });
     });
 });

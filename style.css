@@ -29,14 +29,22 @@ html {
     box-sizing: inherit; /* Miras yoluyla kutu modelini alır */
 }
 
-body, html {
+html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow: hidden; /* HTML elementinin scrollbar'ını kaldır */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100%;    overflow-x: hidden; /* Genel yatay kaydırmayı engeller */
-    /* İngiltere bayrağı renklerinden gradyan */
-    background: linear-gradient(to bottom, #002f9e, #FFFFFF, #C8102E);
-    /* %90 Bulanıklık efekti */
+    height: 100%;
+    overflow-y: auto; /* Body için sadece dikey scrollbar aktif */
+    overflow-x: hidden; /* Yatay scrollbar gizlendi */
+    background: linear-gradient(to bottom, #002f9e, #FFFFFF, #C8102E); /* İngiltere bayrağı renklerinden gradyan */
 }
 
 /* Arkaplan Gradyanı ve Sallanma Efekti */
@@ -246,7 +254,7 @@ body::before {
     color: #333;
     text-align: left;
     min-height: 200px; /* İçerik olmasa bile kutu yüksekliği olsun */
-    overflow-x: auto; /* Yatayda taşan içerik için kaydırma çubuğu ekler */
+    overflow: visible; /* İçerik taşsa bile gözüksün, scrollbar oluşturmasın */
 }
 
 #content-container.visible {
@@ -278,13 +286,13 @@ body::before {
 
 #content-container ul {
     list-style: disc;
-    margin-left: 25px;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 25px;
 }
 
 #content-container ul li {
-    margin-bottom: 8px;
-    line-height: 1.6;
+    margin-bottom: 15px;
+    line-height: 1.8;
 }
 
 #content-container em {
@@ -379,7 +387,7 @@ body::before {
 .sidebar-content {
     padding: 20px;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: auto; /* Sidebar içeriği için kaydırma etkinleştirildi */
 }
 
 .sidebar-content h3 {
@@ -393,10 +401,11 @@ body::before {
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-inline-start: 0;
 }
 
 .sidebar-content ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .sidebar-content ul li a {

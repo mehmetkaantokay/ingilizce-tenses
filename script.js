@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, tüm özneler için tutarlıdır.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + had been + Verb (-ing)</li>
+                    <li><strong>Yapısı:</strong> Özne + had been + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + had been + Fiil (-ing).
                         <ul>
                             <li>I <strong>had been studying</strong> English for hours (Ben saatlerdir İngilizce çalışıyordum.)</li>
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, tüm özneler için tutarlıdır.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + had + Verb (Past Participle - V3)</li>
+                    <li><strong>Yapısı:</strong> Özne + had + Verb (Past Participle - V3)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + had + Fiil (V3).
                         <ul>
                             <li>I <strong>had studied</strong> English before. (Ben daha önce İngilizce çalışmıştım.)</li>
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, özneye göre değişen yardımcı fiiller içerir.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + was/were + Verb (-ing)</li>
+                    <li><strong>Yapısı:</strong> Özne + was/were + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + was/were + Fiil (-ing).
                         <ul>
                             <li>I <strong>was studying</strong> English at 7 PM yesterday. (Ben dün akşam saat 7'de İngilizce çalışıyordum.)</li>
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Simple Past Tense'in yapısı, olumlu cümlelerde fiilin ikinci halini (V2) kullanırken, olumsuz ve soru cümlelerinde yardımcı fiil "did" kullanıldığı için ana fiilin yalın haline (V1) dönmesini gerektirir.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + Verb (Past Simple - V2)</li>
+                    <li><strong>Yapısı:</strong> Özne + Verb (Past Simple - V2)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + Fiil (V2).
                         <ul>
                             <li>I <strong>studied</strong> English yesterday. (Ben dün İngilizce çalıştım.)</li>
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, özneye göre değişen yardımcı fiiller içerir.</p>
                 <ul>    
-                    <li><strong>Yapısı:</strong> Subject + have/has been + Verb (-ing)</li>
+                    <li><strong>Yapısı:</strong> Özne + have/has been + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + have/has been + Fiil (-ing).
                         <ul>
                             <li>I <strong>have been studying</strong> English since morning. (Ben sabahtan beri İngilizce çalışmaktayım/çalışıyorum.)</li>
@@ -472,7 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, özneye göre değişen yardımcı fiiller içerir.</p>
                 <ul>    
-                    <li><strong>Yapısı:</strong> Subject + have/has + Verb (Past Participle - V3)</li>
+                    <li><strong>Yapısı:</strong> Özne + have/has + Verb (Past Participle - V3)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + have/has + Fiil (V3).
                         <ul>
                             <li>I <strong>have studied</strong> English recently. (Ben son zamanlarda İngilizce çalıştım/çalışmışımdır.)</li>
@@ -576,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, özneye göre değişen "to be" yardımcı fiili içerir.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + am/is/are + Verb (-ing)</li>
+                    <li><strong>Yapısı:</strong> Özne + am/is/are + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + am/is/are + Fiil (-ing).
                         <ul>
                             <li>I <strong>am studying</strong> English now. (Ben şu anda İngilizce çalışıyorum.)</li>
@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Simple Present Tense'in yapısı, üçüncü tekil şahıs öznelerde fiile eklenen "-s" veya "-es" takısıyla diğer öznelerden ayrılır.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + Verb (Base Form - V1)</li>
+                    <li><strong>Yapısı:</strong> Özne + Verb (Base Form - V1)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + Fiil (V1).
                         <ul>
                             <li>I <strong>study</strong> English every day. (Ben her gün İngilizce çalışırım.)</li>
@@ -809,7 +809,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <h4>Will</h4>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + will + verb (base form - V1)</li>
+                    <li><strong>Yapısı:</strong> Özne + will + verb (base form - V1)</li>
                     <li><strong>Kullanım Alanları:</strong> Anlık kararlar, söz verme, teklifler, kanıta dayanmayan tahminler.</li>
                     <li><strong>Olumlu Cümleler:</strong>
                 <ul>
@@ -1003,7 +1003,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, tüm özneler için tutarlıdır.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + will be + Verb (-ing)</li>
+                    <li><strong>Yapısı:</strong> Özne + will be + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + will be + Fiil (-ing).
                         <ul>
                             <li>I <strong>will be studying</strong> English at this time tomorrow. (Ben yarın bu saatlerde İngilizce çalışıyor olacağım.)</li>
@@ -1087,7 +1087,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, tüm özneler için tutarlıdır.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + will have + Verb (Past Participle - V3)</li>
+                    <li><strong>Yapısı:</strong> Özne + will have + Verb (Past Participle - V3)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + will have + Fiil (V3).
                         <ul>
                             <li>I <strong>will have studied</strong> English until tomorrow. (Ben yarına kadar İngilizce çalışmış olacağım.)</li>
@@ -1170,7 +1170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Kurallar:</h4>
                 <p>Bu zaman kipinin yapısı, tüm özneler için tutarlıdır.</p>
                 <ul>
-                    <li><strong>Yapısı:</strong> Subject + will have been + Verb (-ing)</li>
+                    <li><strong>Yapısı:</strong> Özne + will have been + Verb (-ing)</li>
                     <li><strong>Olumlu Cümleler:</strong> Özne + will have been + Fiil (-ing).
                         <ul>
                             <li>I <strong>will have been studying</strong> English for a year by tomorrow. (Ben yarına kadar bir yıldır İngilizce çalışıyor olacağım.)</li>

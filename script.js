@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>Had + I, You, He, She, It, We, They</td>
                             <td></td> <!-- Bu kısım boş kalacak çünkü 'had' zaten başta -->
                             <td>Verb (V3)?</td>
-                            <td>... yapmakta mıydım? / mıydı? / mıydık?</td>
+                            <td>... yapmış mıydım? / yapmış mıydı? / yapmış mıydık?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li><strong>Ev temizlemek:</strong> I <strong>had cleaned</strong> the house before my parents arrived. (Annemler gelmeden önce evi temizlemiştim.)</li>
                     <li><strong>Kitap okumak:</strong> She <strong>had read</strong> the book before she saw the movie. (Filmi izlemeden önce kitabı okumuştu.)</li>
                     <li><strong>İngilizce çalışmak:</strong> We <strong>had studied</strong> English for years before we moved to London. (Londra'ya taşınmadan önce yıllarca İngilizce çalışmıştık.)</li>
-                    <li><strong>Kahve içmek:</strong> He <strong>had drunk</strong> all the coffee by the time I woke up. (Ben uyandığımda o tüm kahveyi içmişti.)</li>
+                    <li><strong>Kahve içmek:</strong> He <strong>had drunk</strong> all the coffee by the time arrived. (Ben vardığımda o tüm kahveyi içmişti.)</li>
                     <li><strong>Seyahat etmek:</strong> They <strong>had traveled</strong> to many countries before they decided to settle down. (Yerleşmeye karar vermeden önce birçok ülkeye seyahat etmişlerdi.)</li>
                 </ul>
             `
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>Were + You, We, They</td>
                             <td></td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapıyor muydun? / muyduk? / mular mıydı?</td>
+                            <td>... yapıyor muydun? / muyduk? / yapıyorlar mıydı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Have/Has + Özne + been + Fiil (-ing)?
                         <ul>
-                            <li><strong>Have you been studying</strong> English since morning? (Sen sabahtan beri İngilizce çalışmakta mıydın/çalışıyor muydun?)</li>
+                            <li><strong>Have you been studying</strong> English since morning? (Sen sabahtan beri İngilizce çalışıyor musun/çalışmakta mısın?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + have/has + Özne + been + Fiil (-ing)?
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>He, She, It</td>
                             <td>has</td>
                             <td>Verb (V3)</td>
-                            <td>... yaptı vb.</td>
+                            <td>... yaptı / yapmıştır</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
@@ -1016,12 +1016,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </li>
                     <li><strong>Soru Cümleleri:</strong> Will + Özne + be + Fiil (-ing)?
                         <ul>
-                            <li><strong>Will you be studying</strong> English at this time tomorrow. (Sen yarın bu saatlerde İngilizce çalışıyor olacak mıyım?)</li>
+                            <li><strong>Will you be studying</strong> English at this time tomorrow. (Sen yarın bu saatlerde İngilizce çalışıyor olacak mısın?)</li>
                         </ul>
                     </li>
                     <li><strong>Wh-Soruları:</strong> Soru Kelimesi + will + Özne + be + Fiil (-ing)?
                         <ul>
-                            <li>What <strong>will you be studying</strong> at this time tomorrow? (Sen yarın bu saatlerde ne çalışıyor olacağım?)</li>
+                            <li>What <strong>will you be studying</strong> at this time tomorrow? (Sen yarın bu saatlerde ne çalışıyor olacaksın?)</li>
                         </ul>
                     </li>
                 </ul>
@@ -1133,21 +1133,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, He, She, It, We, They</td>
                             <td>will have</td>
                             <td>Verb (V3)</td>
-                                                       <td>... yapmış olacağım/olacaksın/olacak vb.</td>
+                            <td>... yapmış olacağım / olacaksın / olacak</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't have / will not have</td>
                             <td>Verb (V3)</td>
-                            <td>... yapmış olmayacağım/olmayacaksın/olmayacak vb.</td>
+                            <td>... yapmış olmayacağım / olmayacaksın / olmayacak</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>have</td>
                             <td>Verb (V3)?</td>
-                            <td>... yapmış olacak mıyım/mısın/mı vb.?</td>
+                            <td>... yapmış olacak mıyım? / mısın? / mı?</td>
                         </tr>
                     </tbody>
                 </table>
@@ -1216,21 +1216,21 @@ document.addEventListener('DOMContentLoaded', () => {
                             <td>I, You, He, She, It, We, They</td>
                             <td>will have been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmakta olacağım/olacaksın/olacak vb.</td>
+                            <td>... yapmakta olacağım / olacaksın / olacak</td>
                         </tr>
                         <tr>
                             <td style="color: #c0392b;"><strong>Olumsuz</strong></td>
                             <td>I, You, He, She, It, We, They</td>
                             <td>won't have been / will not have been</td>
                             <td>Verb (-ing)</td>
-                            <td>... yapmakta olmayacağım/olmayacaksın/olmayacak vb.</td>
+                            <td>... yapmakta olmayacağım / olmayacaksın / olmayacak</td>
                         </tr>
                         <tr>
                             <td style="color: #3498db;"><strong>Soru</strong></td>
                             <td>Will + I, You, He, She, It, We, They</td>
                             <td>have been</td>
                             <td>Verb (-ing)?</td>
-                            <td>... yapmakta olacak mıyım/mısın/mı vb.?</td>
+                            <td>... yapmakta olacak mıyım? / mısın? / mı?</td>
                         </tr>
                     </tbody>
                 </table>

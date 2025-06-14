@@ -1,3 +1,5 @@
+https://mehmetkaantokay.github.io/ingilizce-tenses/
+
 İngilizce Zamanlar: Geçmişten Geleceğe Kapsamlı Rehber
 
 Giriş: İngilizce Zaman Çizelgesine Yolculuk
